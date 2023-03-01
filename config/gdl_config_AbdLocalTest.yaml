@@ -28,7 +28,7 @@ general:
   config_override_dirname: ${hydra:job.override_dirname}
   config_path: ${hydra:runtime.config_sources}
   project_name: template_project
-  workspace: your_name
+  workspace: AbdielLocaTest
   max_epochs: 2 # for train only
   min_epochs: 1 # for train only
   raw_data_dir: data

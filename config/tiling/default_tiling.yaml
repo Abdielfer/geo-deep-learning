@@ -1,6 +1,6 @@
 # @package _global_
 tiling:
-  tiling_data_dir: ${general.tiling_data_dir}
+  tiling_data_dir: /Users/abdielfer/RNCanWork/GDLData/TestTiling
   train_val_percent: {'trn':0.7, 'val':0.3}
   patch_size: 32
   min_annot_perc: 1

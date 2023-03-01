@@ -2,17 +2,17 @@
 dataset:
   # dataset-wide
   name:
-  raw_data_csv: ${general.raw_data_csv}
-  raw_data_dir: ${general.raw_data_dir}
+  raw_data_csv: /Users/abdielfer/RNCanWork/GDLData/TestTiling/rawImg.csv
+  raw_data_dir: /Users/abdielfer/RNCanWork/GDLData/TestTiling
   download_data: False
 
   # imagery
-  bands: [1,2,3]
+  bands: [1]
 
   # ground truth
-  attribute_field: properties/class
+  attribute_field: percentage
   attribute_values: [1]
   class_name: # will follow in the next version
-  classes_dict: {'BUIL':1}
+  classes_dict: {'FLood':1}
   class_weights:
   ignore_index: -1

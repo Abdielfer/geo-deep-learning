@@ -1,0 +1,43 @@
+[2023-03-01 10:19:30,167][root][INFO] - 
+Overwritten parameters in the config: 
+mode=tiling
+[2023-03-01 10:19:30,167][root][INFO] - 
+---------------------------------------
+Let's start tiling for segmentation !!!
+---------------------------------------
+[2023-03-01 10:19:30,486][matplotlib][DEBUG] - matplotlib data path: /usr/local/Caskroom/miniconda/base/envs/geo_deep_env/lib/python3.10/site-packages/matplotlib/mpl-data
+[2023-03-01 10:19:30,489][matplotlib][DEBUG] - CONFIGDIR=/Users/abdielfer/.matplotlib
+[2023-03-01 10:19:30,490][matplotlib][DEBUG] - interactive is False
+[2023-03-01 10:19:30,490][matplotlib][DEBUG] - platform is darwin
+[2023-03-01 10:19:30,520][matplotlib][DEBUG] - CACHEDIR=/Users/abdielfer/.matplotlib
+[2023-03-01 10:19:30,521][matplotlib.font_manager][DEBUG] - Using fontManager instance from /Users/abdielfer/.matplotlib/fontlist-v330.json
+[2023-03-01 10:19:30,778][fiona.session][DEBUG] - Could not import boto3, continuing with reduced functionality.
+[2023-03-01 10:19:30,789][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-03-01 10:19:30,790][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-03-01 10:19:31,554][tiling_segmentation][WARNING] - Debug mode activated. Some debug features may mobilize extra disk space and cause delays in execution.
+[2023-03-01 10:19:31,555][dataset.aoi][INFO] - 
+	Successfully read csv file: rawImg.csv
+	Number of rows: 1
+	Copying first row:
+{'tif': '/Users/abdielfer/RNCanWork/GDLData/TestTiling/ottawa_gatineau_villegatineau.tif', 'gpkg': '/Users/abdielfer/RNCanWork/GDLData/TestTiling/ottawa_gatineau_villegatineau.gpkg', 'split': 'trn', 'aoi_id': 'VilleGatineau'}
+
+[2023-03-01 10:19:31,583][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x28bad6020>
+[2023-03-01 10:19:31,585][rasterio.env][DEBUG] - Starting outermost env
+[2023-03-01 10:19:31,585][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-03-01 10:19:31,585][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x28bad6080> created
+[2023-03-01 10:19:31,586][rasterio._filepath][DEBUG] - Installing FilePath filesystem handler plugin...
+[2023-03-01 10:19:31,586][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-03-01 10:19:31,586][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-03-01 10:19:31,586][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x28bad6080>.
+[2023-03-01 10:19:31,586][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x28bad6020>
+[2023-03-01 10:19:31,586][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-03-01 10:19:31,595][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-03-01 10:19:31,595][rasterio._base][DEBUG] - Dataset <open DatasetReader name='/Users/abdielfer/RNCanWork/GDLData/TestTiling/ottawa_gatineau_villegatineau.tif' mode='r'> is started.
+[2023-03-01 10:19:31,596][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x28bad6020>
+[2023-03-01 10:19:31,596][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x28bad6080> options
+[2023-03-01 10:19:31,596][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x28bad6080>.
+[2023-03-01 10:19:31,596][rasterio.env][DEBUG] - Exiting outermost env
+[2023-03-01 10:19:31,596][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x28bad6020>
+[2023-03-01 10:19:31,596][root][DEBUG] - Raster to validate: <open DatasetReader name='/Users/abdielfer/RNCanWork/GDLData/TestTiling/ottawa_gatineau_villegatineau.tif' mode='r'>
+Size: 12398070
+Extended check: False
