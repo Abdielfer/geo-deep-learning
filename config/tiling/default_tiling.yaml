@@ -3,7 +3,7 @@ tiling:
   tiling_data_dir: /Users/abdielfer/RNCanWork/GDLData/TestTiling
   train_val_percent: {'trn':0.7, 'val':0.3}
   patch_size: 32
-  min_annot_perc: 1
+  min_annot_perc: 5
   continuous_values: True
   save_preview_labels: True
   multiprocessing: False

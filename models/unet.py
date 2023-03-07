@@ -85,7 +85,7 @@ class UNet(nn.Module):
         self.decode1 = DecodingBlock(128, 64)
 
         self.final = nn.Conv2d(64, classes, kernel_size=1)
-
+        
     def forward(self, input_data):
         conv1 = self.conv1(input_data)
         maxpool1 = self.maxpool1(conv1)
@@ -140,6 +140,56 @@ class UNetSmall(nn.Module):
         center = self.center(maxpool3)
 
         decode3 = self.decode3(conv3, center)
+        decode2 = self.decode2(conv2, decode3)
+        decode1 = self.decode1(conv1, decode2)
+
+        final = nn.functional.interpolate(self.final(decode1), input_data.size()[2:], mode='bilinear', align_corners=True)
+
+        return final
+
+
+class UNetFlood(nn.Module):
+    """Main UNet architecture
+    - This vertion is adapted to small input images, cosidering higher resolution DTM inputs. 
+    NOTE: Flood context in genereal is well described by a short distance from the river ( max 200m).
+    This is an "in progress" experiment
+    """
+
+    def __init__(self, classes, in_channels, dropout=False, prob=0.5):
+        super().__init__()
+
+        self.conv1 = EncodingBlock(in_channels, 64, dropout=dropout, prob=prob)
+        self.maxpool1 = nn.MaxPool2d(kernel_size=2)
+        self.conv2 = EncodingBlock(64, 128, dropout=dropout, prob=prob)
+        self.maxpool2 = nn.MaxPool2d(kernel_size=2)
+        self.conv3 = EncodingBlock(128, 256, dropout=dropout, prob=prob)
+        self.maxpool3 = nn.MaxPool2d(kernel_size=2)
+        self.conv4 = EncodingBlock(256, 512, dropout=dropout, prob=prob)
+        self.maxpool4 = nn.MaxPool2d(kernel_size=2)
+
+        self.center = EncodingBlock(512, 1024, dropout=dropout, prob=prob)
+
+        self.decode4 = DecodingBlock(1024, 512)
+        self.decode3 = DecodingBlock(512, 256)
+        self.decode2 = DecodingBlock(256, 128)
+        self.decode1 = DecodingBlock(128, 64)
+
+        self.final = nn.Conv2d(64, classes, kernel_size=1)
+
+    def forward(self, input_data):
+        conv1 = self.conv1(input_data)
+        maxpool1 = self.maxpool1(conv1)
+        conv2 = self.conv2(maxpool1)
+        maxpool2 = self.maxpool2(conv2)
+        conv3 = self.conv3(maxpool2)
+        maxpool3 = self.maxpool3(conv3)
+        conv4 = self.conv4(maxpool3)
+        maxpool4 = self.maxpool4(conv4)
+
+        center = self.center(maxpool4)
+
+        decode4 = self.decode4(conv4, center)
+        decode3 = self.decode3(conv3, decode4)
         decode2 = self.decode2(conv2, decode3)
         decode1 = self.decode1(conv1, decode2)
 
