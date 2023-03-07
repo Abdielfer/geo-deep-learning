@@ -123,10 +123,10 @@ class Tiler(object):
 
         # Tile stride defaults to patch size
         if not patch_stride:
-            patch_stride = self.dest_patch_size
+            self.patch_stride = self.dest_patch_size
         if not isinstance(patch_stride, int):
             raise TypeError(f'Tile stride should be an integer. Got {patch_stride} of type {type(patch_stride)}')
-        self.patch_stride = patch_stride
+   
 
         if not isinstance(min_annot_perc, Number) and 0 <= min_annot_perc <= 100:
             raise TypeError(f'Minimum annotated percent should be a number between 0 and 100.\n'
@@ -326,7 +326,7 @@ class Tiler(object):
 
         # Initialize a sampler and a dataloader. If we need overlapping, stride must be adjusted accordingly.
         # For now, having stride parameter equal to the size, we have no overlapping (except for the borders).
-        sampler = GridGeoSampler(resulting_dataset, size=self.dest_patch_size, stride=self.dest_patch_size)
+        sampler = GridGeoSampler(resulting_dataset, size=self.dest_patch_size, stride=self.patch_stride)
         dataloader = DataLoader(resulting_dataset, sampler=sampler, collate_fn=stack_samples)
 
         if len(dataloader) == 0:
