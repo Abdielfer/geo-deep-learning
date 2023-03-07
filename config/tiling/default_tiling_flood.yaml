@@ -1,0 +1,13 @@
+# @package _global_
+tiling:
+  tiling_data_dir: /Users/abdielfer/RNCanWork/GDLData/TestTiling
+  train_val_percent: {'trn':0.7, 'val':0.3}
+  patch_size: 128
+  min_annot_perc: 5
+  stride: 20  # Pixels number type=int
+  continuous_values: True
+  save_preview_labels: True
+  multiprocessing: False
+  clahe_clip_limit: 0
+  write_dest_raster: False
+  write_mode: "raise_exists"
