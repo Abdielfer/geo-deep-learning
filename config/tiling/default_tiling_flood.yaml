@@ -4,7 +4,7 @@ tiling:
   train_val_percent: {'trn':0.7, 'val':0.3}
   patch_size: 128
   min_annot_perc: 5
-  stride: 20  # Pixels number type=int
+  patch_stride: 20  # Pixels number type=int
   continuous_values: True
   save_preview_labels: True
   multiprocessing: False

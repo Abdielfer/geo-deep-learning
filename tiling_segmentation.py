@@ -625,6 +625,7 @@ def main(cfg: DictConfig) -> None:
 
     # TILING PARAMETERS
     patch_size = get_key_def('patch_size', cfg['tiling'], default=512, expected_type=int)
+    patch_stride = get_key_def('patch_stride', cfg['tiling'], default=patch_size, expected_type=int)
     min_annot_perc = get_key_def('min_annot_perc', cfg['tiling'], expected_type=Number, default=0)
     continuous_vals = get_key_def('continuous_values', cfg['tiling'], default=True)
     save_prev_labels = get_key_def('save_preview_labels', cfg['tiling'], default=True)
@@ -670,6 +671,7 @@ def main(cfg: DictConfig) -> None:
     tiler = Tiler(tiling_root_dir=exp_dir,
                   src_aoi_list=src_data_list,
                   patch_size=patch_size,
+                  patch_stride=patch_stride,
                   min_annot_perc=min_annot_perc,
                   val_percent=val_percent,
                   write_mode=write_mode,
