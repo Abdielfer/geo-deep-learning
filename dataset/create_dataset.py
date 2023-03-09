@@ -179,6 +179,11 @@ class DRDataset(GeoDataset):
             out_shape=out_shape, window=from_bounds(*bounds, self.dr_ds.transform)
         )
 
+        if dest.dtype == np.uint16:
+            dest = dest.astype(np.int32)
+        elif dest.dtype == np.uint32:
+            dest = dest.astype(np.int64)
+
         tensor = torch.tensor(dest)
 
         return tensor
@@ -186,23 +191,34 @@ class DRDataset(GeoDataset):
 
 class GDLVectorDataset(GeoDataset):
     """The dataset is base on rasterio's DatasetReader class, instanciated by vector file."""
-    def __init__(self, vec_ds: str = None, res: float = 0.0001) -> None:
+    def __init__(self, vec_ds: str = None, nodata_mask: ogr.DataSource | None = None, res: float = 0.0001) -> None:
         """Initialize a new Dataset instance.
 
         Args:
             vec_ds: vector labels geopackage
+            nodata_mask: nodata mask taken from the corresponding raster image
             res: resolution of the dataset in units of CRS
         Returns:
-            An OGR datasource in memory
+            Initializes vector dataset (subclass of the GeoDataset).
         """
         super().__init__()
 
-        self.vec_ds = ogr.Open(str(vec_ds))
+        # Read the dataset as an OGR datasouce:
+        vec_ds = ogr.Open(str(vec_ds))
         self.res = res
 
-        assert self.vec_ds is not None, "The vector dataset is empty."
+        assert vec_ds is not None, "The vector dataset is empty."
 
-        vec_ds_layer = self.vec_ds.GetLayer()
+        # Copy the datasource to memory:
+        src_mem_driver = ogr.GetDriverByName('MEMORY')
+        mem_vec_ds = src_mem_driver.CopyDataSource(vec_ds, 'src_mem_ds')
+        self.vec_srs = mem_vec_ds.GetLayer().GetSpatialRef()
+        vec_srs_wkt = self.vec_srs.ExportToPrettyWkt()
+        self._crs = CRS.from_wkt(wkt=vec_srs_wkt)
+
+        # Clip vector labels with raster nodata mask:
+        self.ds = self._clip_nodata(vec_ds=mem_vec_ds, nodata_mask=nodata_mask)
+        vec_ds_layer = self.ds.GetLayer()
         minx, maxx, miny, maxy = vec_ds_layer.GetExtent()
         del vec_ds_layer
 
@@ -211,12 +227,29 @@ class GDLVectorDataset(GeoDataset):
         coords = (minx, maxx, miny, maxy, mint, maxt)
         self.index.insert(0, coords, 'vec')
 
-        src_mem_driver = ogr.GetDriverByName('MEMORY')
-        self.mem_vec_ds = src_mem_driver.CopyDataSource(self.vec_ds, 'src_mem_ds')
-        self.vec_srs = self.mem_vec_ds.GetLayer().GetSpatialRef()
-        vec_srs_wkt = self.vec_srs.ExportToPrettyWkt()
+        vec_ds = None
+        mem_vec_ds = None
 
-        self._crs = CRS.from_wkt(vec_srs_wkt)
+    def _clip_nodata(self, vec_ds: ogr.DataSource, nodata_mask: ogr.DataSource | None) -> ogr.DataSource:
+        """
+        Clips the vector dataset with the nodata mask polygon taken from the corresponding raster file.
+        If the mask is None, returns non-clipped dataset.
+        Args:
+            vec_ds: OGR datasouce to clip
+            nodata_mask: OGR vector noadata mask from the raster file, or None
+
+        Returns:
+            Clipped (or original) OGR datasource.
+        """
+        if nodata_mask is None:
+            return vec_ds
+        # Clip the dataset with the nodata mask:
+        out_driver = ogr.GetDriverByName('MEMORY')
+        cropped_mem_ds = out_driver.CreateDataSource('memdata')
+        cropped_layer = cropped_mem_ds.CreateLayer('0', self.vec_srs, geom_type=ogr.wkbMultiPolygon)
+        ogr.Layer.Clip(vec_ds.GetLayer(), nodata_mask.GetLayer(), cropped_layer)
+
+        return cropped_mem_ds
 
     @staticmethod
     def _check_curve(layer: ogr.Layer) -> None:
@@ -235,10 +268,10 @@ class GDLVectorDataset(GeoDataset):
         feature = layer.GetNextFeature()
         while feature is not None:
             geom = feature.GetGeometryRef()
-            name = geom.GetGeometryName()
+            name_wkt = geom.ExportToWkt()
 
             # Approximate a curvature by a polygon geometry:
-            if name != "POLYGON" and name != "MULTIPOLYGON":
+            if 'curv' in name_wkt.lower():
                 linear_geom = geom.GetLinearGeometry()
                 new_feature = ogr.Feature(feature_defn)
                 new_feature.SetGeometryDirectly(linear_geom)
@@ -282,7 +315,7 @@ class GDLVectorDataset(GeoDataset):
         out_mem_ds = out_driver.CreateDataSource('memdata')
         # Clip it with the bounding box:
         out_layer = out_mem_ds.CreateLayer('0', self.vec_srs, geom_type=ogr.wkbMultiPolygon)
-        ogr.Layer.Clip(self.mem_vec_ds.GetLayer(), mem_layer, out_layer)
+        ogr.Layer.Clip(self.ds.GetLayer(), mem_layer, out_layer)
 
         # Check that there is no curve geometry in the output patch:
         self._check_curve(layer=out_layer)

@@ -17,25 +17,29 @@ from rasterio import MemoryFile, DatasetReader
 from rasterio.plot import reshape_as_raster
 from rasterio.shutil import copy as riocopy
 import xml.etree.ElementTree as ET
+from osgeo import gdal, gdalconst, ogr, osr
 
 from shapely.geometry import box, Polygon
 
 logger = logging.getLogger(__name__)
 
 
-def create_new_raster_from_base(input_raster, output_raster, write_array):
+def create_new_raster_from_base(input_raster, output_raster, write_array, dtype = np.uint8, **kwargs):
     """Function to use info from input raster to create new one.
     Args:
         input_raster: input raster path and name
         output_raster: raster name and path to be created with info from input
         write_array (optional): array to write into the new raster
+        dtype (optional): data type of output raster
+        kwargs (optional): Complementary parameter(s)
 
     Return:
-        none
+        None
     """
     src = check_rasterio_im_load(input_raster)
     if len(write_array.shape) == 2:  # 2D array
         count = 1
+        write_array = write_array[np.newaxis, :, :]
     elif len(write_array.shape) == 3:  # 3D array
         if write_array.shape[0] > 100:
             logging.warning(f"\nGot {write_array.shape[0]} bands. "
@@ -45,9 +49,10 @@ def create_new_raster_from_base(input_raster, output_raster, write_array):
     else:
         raise ValueError(f'Array with {len(write_array.shape)} dimensions cannot be written by rasterio.')
 
-    if write_array.shape[1:] != (src.height, src.width):
-        raise ValueError(f"Output array's width and height should be identical to dimensions of input reference raster")
-
+    if write_array.shape[-2:] != (src.height, src.width):
+        raise ValueError(f"Output array's width and height should be identical to dimensions of input reference raster"
+                         f"\nInput reference raster shape (h x w): ({src.height}, {src.width})"
+                         f"\nOutput array shape (h x w): {write_array.shape[1:]}")
     # Cannot write to 'VRT' driver
     driver = 'GTiff' if src.driver == 'VRT' else src.driver
 
@@ -57,10 +62,14 @@ def create_new_raster_from_base(input_raster, output_raster, write_array):
                        height=src.height,
                        count=count,
                        crs=src.crs,
-                       dtype=np.uint8,
+                       dtype=dtype,
                        transform=src.transform,
                        compress='lzw') as dst:
         dst.write(write_array)
+        # add tag to transmit more informations
+        if 'checkpoint_path' in kwargs.keys():
+            # add the path to the model checkpoint
+            dst.update_tags(checkpoint=kwargs['checkpoint_path'])
 
 
 def get_key_recursive(key, config):
@@ -229,17 +238,16 @@ def overlap_poly1_rto_poly2(polygon1: Polygon, polygon2: Polygon) -> float:
 
 def multi2poly(returned_vector_pred, layer_name=None):
     """
-    Convert shapely multipolygon to polygon. If fail return a logging error.
-    This function will read an PATH string create an geodataframe and explode
-    all multipolygon to polygon and save the geodataframe at the same PATH.
-    Side note, if you use this function without a layer name, be sure that the
-    GPKG dont have a layer otherwise a new layer will be created with the 
-    resulting Polygon.
+    Converts shapely multipolygon to polygon. If fails, returns a logging error.
+    This function will read a PATH string, create a geodataframe, explode all
+    multipolygon to polygon and save the geodataframe at the same PATH.
     Args:
         returned_vector_pred: string, geopackage PATH where the post-processing
-                              results are saved
-        layer_name (optional): string, the name of layer to look into for multipolygon, the name
-                    represente the classes post-processed. Default None.
+                              results are saved.
+        layer_name (optional): string, the name of layer to look into for multipolygons.
+                               For example, if using during post-processing, the layer
+                               name could represent the class name if class are stored
+                               in separate layers. Default None.
                     
     Return:
         none
@@ -252,4 +260,134 @@ def multi2poly(returned_vector_pred, layer_name=None):
             gdf_exploded.to_file(returned_vector_pred, layer=layer_name) # overwrite the layer readed
     except Exception as e:
         logging.error(f"\nSomething went wrong during the conversion of Polygon. \nError {type(e)}: {e}")
-        
+
+
+def fetch_tag_raster(raster_path, tag_wanted):
+    """
+    Fetch the tag(s) information saved inside the tiff.
+    TODO, change the `tag_wanted` to accept str or list of str.
+    Args:
+        raster_path: string, raster path
+        tag_wanted: string, tag name, ex. 'checkpoint'
+    Return:
+        string containing associate information to the `tag_wanted`
+    """
+    with rasterio.open(raster_path) as tiff_src:
+        tags = tiff_src.tags()
+    # check if the tiff have the wanted tag save in
+    if tag_wanted in tags.keys():
+        return tags[tag_wanted]
+    else:
+        logging.error(
+            f"\nThe tag {tag_wanted} was not found in the {tags.keys()},"
+            f" try again with one inside that list."
+        )
+        raise ValueError('Tag not found.')
+
+
+def gdf_mean_vertices_nb(gdf: gpd.GeoDataFrame):
+    """
+    Counts vertices of all polygons inside a given GeoDataFrame
+    @param gdf: input GeoDataFrame to count vertices from
+    """
+    if len(gdf.geometry) == 0:
+        print("No features in GeoDataFrame")
+        return None
+    vertices_per_polygon = []
+    for geom in gdf.geometry:
+        if geom is None:
+            logging.warning(f"GeoDataFrame contains a \"None\" geometry")
+        elif geom.geom_type == "MultiPolygon":
+            for polygon in geom.geoms:
+                vertices_per_polygon.append(len(polygon.exterior.coords))
+        elif geom.geom_type == "Polygon":
+            vertices_per_polygon.append(len(geom.exterior.coords))
+        else:
+            logging.warning(f"Only supports MultiPolygon or Polygon. \nGot {geom.geom_type}")
+    mean_ext_vert_nb = np.mean(vertices_per_polygon)
+    return mean_ext_vert_nb
+
+
+def mask_nodata(img_patch: Union[str, Path], gt_patch: Union[str, Path], nodata_val: int, mask_val: int = 255) -> None:
+    """
+    Masks label raster file with "ignore_index" value where pixels are "nodata" in the corresponding raster image.
+    Args:
+        img_patch: raster tile image path
+        gt_patch: raster tile label path
+        nodata_val: nodata value
+        mask_val: masking value (255 by default)
+
+    Returns:
+        Masks label tile or None if no nadata pixels
+    """
+    image_ds = gdal.Open(str(img_patch), gdalconst.GA_ReadOnly)
+    image_arr = image_ds.ReadAsArray()
+    nodata_mask = image_arr != nodata_val
+    nodata_mask_flat = np.sum(nodata_mask, axis=0) != 0
+
+    if nodata_mask_flat.min() == 1:
+        image_ds = None
+        return
+
+    gt_patch_ds = gdal.Open(str(gt_patch), gdalconst.GA_Update)
+    gt_patch_arr = gt_patch_ds.ReadAsArray()
+    masked_gt_arr = np.where(nodata_mask_flat == 1, gt_patch_arr, mask_val)
+    gt_patch_ds.GetRasterBand(1).WriteArray(masked_gt_arr)
+    gt_patch_ds = None
+    image_ds = None
+
+
+def nodata_vec_mask(raster: rasterio.DatasetReader, nodata_val: int = None) -> ogr.DataSource | None:
+    """
+    Fetches nodata mask from the raster image.
+    Args:
+        raster: raster dataset (DatasetReader) object.
+        nodata_val: either None or predefined by a user integer value.
+        If None, tries to fetch nodata value from the raster.
+
+    Returns:
+        Either None or vector nodata mask as an OGR datasource.
+    """
+    if nodata_val is None:
+        nodata_val = raster.nodata
+        if not isinstance(nodata_val, int | float):
+            return None
+
+    # Get original CRS and transform:
+    crs_wkt = raster.crs.to_wkt()
+    crs_gt = raster.transform
+
+    # Read the data and calculate a nodata mask:
+    image_arr = raster.read()
+    nodata_mask = image_arr != nodata_val
+    nodata_mask_flat = np.sum(nodata_mask, axis=0) != 0
+    nodata_mask_flat = nodata_mask_flat.astype('uint8')
+
+    raster_drv = gdal.GetDriverByName("MEM")
+    dst = raster_drv.Create("/vsimem/raster", int(nodata_mask_flat.shape[1]),
+                            int(nodata_mask_flat.shape[0]), 1, gdal.GDT_Byte)
+
+    gdal_src_gt = [crs_gt[2], crs_gt[0], crs_gt[1], crs_gt[5], crs_gt[3], crs_gt[4]]
+    dst.SetGeoTransform(gdal_src_gt)
+    dst.SetProjection(crs_wkt)
+    dst.GetRasterBand(1).WriteArray(nodata_mask_flat)
+    dst.GetRasterBand(1).SetNoDataValue(0)
+    src_band = dst.GetRasterBand(1)
+
+    # Create vector datasource in memory:
+    drv = ogr.GetDriverByName("MEMORY")
+    vec_ds = drv.CreateDataSource('memdata')
+
+    # Initialize projection:
+    spatial_ref = osr.SpatialReference()
+    spatial_ref.ImportFromWkt(crs_wkt)
+    layer = vec_ds.CreateLayer('0', spatial_ref, geom_type=ogr.wkbPolygon)
+
+    # Vectorize the raster nodata mask:
+    gdal.Polygonize(src_band, src_band, layer, -1, [], callback=None)
+
+    return vec_ds
+
+
+if __name__ == "__main__":
+    pass
