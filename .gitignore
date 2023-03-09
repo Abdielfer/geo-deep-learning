@@ -9,6 +9,8 @@
 *.shp
 *.pkl
 *.txt
+*.png
+*.jpg
 
 # Jupyter Notebook
 .ipynb_checkpoints
