@@ -1,0 +1,22 @@
+[2023-04-06 13:14:33,010][root][INFO] - 
+Overwritten parameters in the config: 
+mode=tiling
+[2023-04-06 13:14:33,011][root][INFO] - 
+---------------------------------------
+Let's start tiling for segmentation !!!
+---------------------------------------
+[2023-04-06 13:14:34,548][root][ERROR] - The key download_data as a None value.
+[2023-04-06 13:14:34,550][root][ERROR] - The key multiprocessing as a None value.
+[2023-04-06 13:14:34,550][root][ERROR] - The key write_dest_raster as a None value.
+[2023-04-06 13:14:34,551][root][ERROR] - The key clahe_clip_limit as a None value.
+[2023-04-06 13:14:34,653][tiling_segmentation][WARNING] - Data path exists: C:\Users\abfernan\CrossCanFloodMapping\RawData\TestTiling\template_project. Make sure patches belong to the same experiment.
+[2023-04-06 13:14:34,674][dataset.aoi][INFO] - 
+	Successfully read csv file: rawImg.csv
+	Number of rows: 1
+	Copying first row:
+{'tif': 'C:\\Users\\abfernan\\CrossCanFloodMapping\\RawData\\TestTiling\\BC_Bulton.tif', 'gpkg': 'C:\\Users\\abfernan\\CrossCanFloodMapping\\RawData\\TestTiling\\BC_Bulton.gpkg', 'split': 'trn', 'aoi_id': 'test'}
+
+[2023-04-06 13:14:34,776][dataset.aoi][WARNING] - 
+No features found for ground truth "C:\Users\abfernan\CrossCanFloodMapping\RawData\TestTiling\BC_Bulton.gpkg",
+filtered by attribute field "percentage"
+with values "[1]"

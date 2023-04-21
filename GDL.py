@@ -2,11 +2,10 @@ import os
 import time
 import hydra
 import logging
-
 from hydra.utils import get_method
 from omegaconf import DictConfig, OmegaConf, open_dict
 from utils.utils import print_config, get_git_hash
-
+os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 
 @hydra.main(config_path="config", config_name="gdl_config_AbdLocalTest")
 def run_gdl(cfg: DictConfig) -> None:

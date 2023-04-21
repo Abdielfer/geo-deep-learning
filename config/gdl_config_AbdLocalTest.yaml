@@ -29,13 +29,13 @@ general:
   config_path: ${hydra:runtime.config_sources}
   project_name: template_project
   workspace: AbdielLocaTest
-  max_epochs: 2 # for train only
+  max_epochs: 20 # for train only
   min_epochs: 1 # for train only
-  raw_data_dir: data
-  raw_data_csv: tests/tiling/tiling_segmentation_binary_ci.csv
-  tiling_data_dir: ${general.raw_data_dir}/patches # where the patches will be saved
+  raw_data_dir: C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\RawData\Class1
+  raw_data_csv: C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\RawData\Class1RawData.csv
+  tiling_data_dir: ${general.raw_data_dir} # where the patches will be saved
   save_weights_dir: saved_model/${general.project_name}
 
-print_config: True # save the config in the log folder
+print_config: False # save the config in the log folder
 mode: {verify, tiling, train, inference, evaluate}
-debug: True #False # will print the complete yaml config plus run a validation test
+debug: False #False # will print the complete yaml config plus run a validation test

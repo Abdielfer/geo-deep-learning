@@ -1,0 +1,9 @@
+[2023-04-06 19:53:44,253][root][INFO] - 
+Overwritten parameters in the config: 
+mode=evaluate
+[2023-04-06 19:53:44,254][root][INFO] - 
+-----------------------------------------
+Let's start evaluate for segmentation !!!
+-----------------------------------------
+[2023-04-06 19:53:45,539][root][CRITICAL] - Couldn't locate path: C:\Users\abfernan\CrossCanFloodMapping\geo-deep-learning\saved_model\template_project.
+Provided key: state_dict_path
