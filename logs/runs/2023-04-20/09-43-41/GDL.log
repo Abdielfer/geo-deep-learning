@@ -1,0 +1,47 @@
+[2023-04-20 09:43:42,039][root][INFO] - 
+Overwritten parameters in the config: 
+mode=tiling
+[2023-04-20 09:43:42,039][root][INFO] - 
+---------------------------------------
+Let's start tiling for segmentation !!!
+---------------------------------------
+[2023-04-20 09:43:44,152][root][ERROR] - The key download_data as a None value.
+[2023-04-20 09:43:44,152][root][ERROR] - The key save_preview_labels as a None value.
+[2023-04-20 09:43:44,153][root][ERROR] - The key multiprocessing as a None value.
+[2023-04-20 09:43:44,154][root][ERROR] - The key write_dest_raster as a None value.
+[2023-04-20 09:43:44,154][root][ERROR] - The key clahe_clip_limit as a None value.
+[2023-04-20 09:43:44,337][tiling_segmentation][WARNING] - Data path exists: C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\C1Dataset\percentage_1. Make sure patches belong to the same experiment.
+[2023-04-20 09:43:44,351][dataset.aoi][INFO] - 
+	Successfully read csv file: Class1RawData.csv
+	Number of rows: 35
+	Copying first row:
+{'tif': 'C:\\Users\\abfernan\\CrossCanFloodMapping\\DatasetCNNFlood\\RawData\\Class1\\CA_Lethbridge.tif', 'gpkg': 'C:\\Users\\abfernan\\CrossCanFloodMapping\\DatasetCNNFlood\\RawData\\Class1\\CA_Lethbridge_C1.gpkg', 'split': 'trn', 'aoi_id': None}
+
+[2023-04-20 09:43:44,960][dataset.aoi][ERROR] - Features in label file C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\RawData\Class1\Hamilton_Niagara_WellandLyonsSingers_C1.gpkg do not intersect with bounds of raster file C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Hamilton_Niagara_WellandLyonsSingers.tif
+[2023-04-20 09:43:45,101][root][ERROR] - CRS mismatch: 
+TIF file "<open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Hamilton_Niagara_WellandLyonsSingers.tif' mode='r'>" has EPSG:31971 CRS; 
+GPKG file "      id             in_id flood_mech  ... See id_2                                           geometry
+0  294.0  ONLYON0065IN0107   riverine  ...   1    1  MULTIPOLYGON (((-79.22642 42.93434, -79.22638 ...
+
+[1 rows x 30 columns]" has EPSG:4617 CRS.
+[2023-04-20 09:43:45,171][dataset.aoi][ERROR] - Features in label file C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\RawData\Class1\Hamilton_Niagara_WingnellEagleBearsBeaver_C1.gpkg do not intersect with bounds of raster file C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Hamilton_Niagara_WingnellEagleBearsBeaver.tif
+[2023-04-20 09:43:45,198][root][ERROR] - CRS mismatch: 
+TIF file "<open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Hamilton_Niagara_WingnellEagleBearsBeaver.tif' mode='r'>" has EPSG:31971 CRS; 
+GPKG file "      id             in_id flood_mech  ... See id_2                                           geometry
+0  304.0  ONBEAV0060IN0147   riverine  ...   1    3  MULTIPOLYGON (((-79.21823 42.87160, -79.21813 ...
+1  311.0  ONBEAR0059IN0045   riverine  ...   1    3  MULTIPOLYGON (((-79.27025 42.87660, -79.27036 ...
+
+[2 rows x 30 columns]" has EPSG:4617 CRS.
+[2023-04-20 09:43:45,300][dataset.aoi][ERROR] - Features in label file C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\RawData\Class1\Hamilton_RichardsonFrancisWalkerCreek_C1.gpkg do not intersect with bounds of raster file C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Hamilton_RichardsonFrancisWalkerCreek.tif
+[2023-04-20 09:43:45,336][root][ERROR] - CRS mismatch: 
+TIF file "<open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Hamilton_RichardsonFrancisWalkerCreek.tif' mode='r'>" has EPSG:31971 CRS; 
+GPKG file "      id             in_id flood_mech  ... See id_2                                           geometry
+0  303.0  ONRICH0073IN0026   riverine  ...   1    1  MULTIPOLYGON (((-79.29957 43.12421, -79.29962 ...
+1  310.0  ONWALK0071IN0061   riverine  ...   1    1  MULTIPOLYGON (((-79.22756 43.19073, -79.22759 ...
+
+[2 rows x 30 columns]" has EPSG:4617 CRS.
+[2023-04-20 09:44:00,218][dataset.aoi][ERROR] - Features in label file C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\RawData\Class1\QC_MontrealRiveSud_O_C1.gpkg do not intersect with bounds of raster file C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/QC_MontrealRiveSud_O.tif
+[2023-04-20 09:44:00,221][dataset.aoi][WARNING] - 
+No features found for ground truth "C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\RawData\Class1\QC_MontrealRiveSud_O_C1.gpkg",
+filtered by attribute field "percentage"
+with values "[1]"

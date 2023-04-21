@@ -123,8 +123,11 @@ class Tiler(object):
         self.dest_patch_size = patch_size
 
         # Tile stride defaults to patch size
-        if not patch_stride:
+        if patch_stride:
+            self.patch_stride = patch_stride
+        else:
             self.patch_stride = self.dest_patch_size
+        
         if not isinstance(patch_stride, int):
             raise TypeError(f'Tile stride should be an integer. Got {patch_stride} of type {type(patch_stride)}')
    

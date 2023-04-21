@@ -334,7 +334,7 @@ def read_csv(csv_file_name: str) -> Dict:
                 row[1] = None
             # save all values
             list_values.append(
-                {'tif': str(row[0]), 'gpkg': row[1], 'split': row[2], 'aoi_id': row[3]})
+                {'tif': str(row[0]), 'gpkg': row[1], 'split': row[2]}) #, 'aoi_id': row[3]
     try:
         # Try sorting according to dataset name (i.e. group "train", "val" and "test" rows together)
         list_values = sorted(list_values, key=lambda k: k['split'])

@@ -1,0 +1,36 @@
+[2023-04-20 11:39:00,855][root][INFO] - 
+Overwritten parameters in the config: 
+mode=tiling
+[2023-04-20 11:39:00,856][root][INFO] - 
+---------------------------------------
+Let's start tiling for segmentation !!!
+---------------------------------------
+[2023-04-20 11:39:03,196][root][ERROR] - The key download_data as a None value.
+[2023-04-20 11:39:03,197][root][ERROR] - The key save_preview_labels as a None value.
+[2023-04-20 11:39:03,197][root][ERROR] - The key multiprocessing as a None value.
+[2023-04-20 11:39:03,198][root][ERROR] - The key write_dest_raster as a None value.
+[2023-04-20 11:39:03,198][root][ERROR] - The key clahe_clip_limit as a None value.
+[2023-04-20 11:39:03,397][dataset.aoi][INFO] - 
+	Successfully read csv file: Class1RawData.csv
+	Number of rows: 18
+	Copying first row:
+{'tif': 'C:\\Users\\abfernan\\CrossCanFloodMapping\\DatasetCNNFlood\\RawData\\Class1\\QC_Gaspe1Et2.tif', 'gpkg': 'C:\\Users\\abfernan\\CrossCanFloodMapping\\DatasetCNNFlood\\RawData\\Class1\\QC_Gaspe1Et2_C1.gpkg', 'split': 'trn', 'aoi_id': None}
+
+[2023-04-20 11:39:06,895][root][WARNING] - Cannot parse epsg code from raster's crs 'C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/SK_Moose_Jaw.tif'
+[2023-04-20 11:39:09,187][root][WARNING] - Cannot parse epsg code from raster's crs 'C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/SK_Regina.tif'
+[2023-04-20 11:39:09,510][root][WARNING] - Cannot parse epsg code from raster's crs 'C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/SK_Tisdale.tif'
+[2023-04-20 11:39:09,824][root][WARNING] - Cannot parse epsg code from raster's crs 'C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/SK_Wadena.tif'
+[2023-04-20 11:39:10,233][root][WARNING] - Cannot parse epsg code from raster's crs 'C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/SK_Watson.tif'
+[2023-04-20 11:39:12,466][root][WARNING] - Cannot parse epsg code from raster's crs 'C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/SK_Weyburn.tif'
+[2023-04-20 11:39:12,934][root][WARNING] - Cannot parse epsg code from raster's crs 'C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/SK_Wolseley.tif'
+[2023-04-20 11:39:13,522][root][WARNING] - Cannot parse epsg code from raster's crs 'C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/SK_Yorkton.tif'
+[2023-04-20 11:39:13,526][tiling_segmentation][INFO] - Patches will be written to C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\C1Dataset\percentage_1
+
+
+[2023-04-20 11:39:13,527][tiling_segmentation][INFO] - Preparing patches 
+	Samples_size: 384 
+[2023-04-20 11:39:19,688][tiling_segmentation][INFO] - Cropping raster patches...
+[2023-04-20 11:39:23,180][tiling_segmentation][INFO] - Cropping raster patches...
+[2023-04-20 11:39:24,453][tiling_segmentation][INFO] - Cropping raster patches...
+[2023-04-20 11:39:25,104][tiling_segmentation][INFO] - Cropping raster patches...
+[2023-04-20 11:40:02,015][tiling_segmentation][INFO] - Cropping raster patches...

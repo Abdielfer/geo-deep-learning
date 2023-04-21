@@ -1,0 +1,34 @@
+[2023-04-21 09:04:21,699][root][INFO] - 
+Overwritten parameters in the config: 
+mode=tiling
+[2023-04-21 09:04:21,699][root][INFO] - 
+---------------------------------------
+Let's start tiling for segmentation !!!
+---------------------------------------
+[2023-04-21 09:04:21,915][matplotlib][DEBUG] - matplotlib data path: C:\Users\abfernan\.conda\envs\geo_deep_env\lib\site-packages\matplotlib\mpl-data
+[2023-04-21 09:04:21,923][matplotlib][DEBUG] - CONFIGDIR=C:\Users\abfernan\.matplotlib
+[2023-04-21 09:04:21,923][matplotlib][DEBUG] - interactive is False
+[2023-04-21 09:04:21,923][matplotlib][DEBUG] - platform is win32
+[2023-04-21 09:04:21,979][matplotlib][DEBUG] - CACHEDIR=C:\Users\abfernan\.matplotlib
+[2023-04-21 09:04:21,987][matplotlib.font_manager][DEBUG] - Using fontManager instance from C:\Users\abfernan\.matplotlib\fontlist-v330.json
+[2023-04-21 09:04:22,395][fiona.session][DEBUG] - Could not import boto3, continuing with reduced functionality.
+[2023-04-21 09:04:22,403][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:04:22,411][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:04:23,947][pyproj][DEBUG] - PROJ_ERROR: Cannot open https://cdn.proj.org/us_noaa_MD.tif: schannel: next InitializeSecurityContext failed: Unknown error (0x80092012) - The revocation function was unable to check revocation for the certificate.
+[2023-04-21 09:04:24,123][pyproj][DEBUG] - PROJ_ERROR: Cannot open https://cdn.proj.org/us_noaa_MD.tif: schannel: next InitializeSecurityContext failed: Unknown error (0x80092012) - The revocation function was unable to check revocation for the certificate.
+[2023-04-21 09:04:24,275][pyproj][DEBUG] - PROJ_ERROR: Cannot open https://cdn.proj.org/us_noaa_njhpgn.tif: schannel: next InitializeSecurityContext failed: Unknown error (0x80092012) - The revocation function was unable to check revocation for the certificate.
+[2023-04-21 09:04:24,443][pyproj][DEBUG] - PROJ_ERROR: Cannot open https://cdn.proj.org/us_noaa_MD.tif: schannel: next InitializeSecurityContext failed: Unknown error (0x80092012) - The revocation function was unable to check revocation for the certificate.
+[2023-04-21 09:04:24,603][pyproj][DEBUG] - PROJ_ERROR: Cannot open https://cdn.proj.org/us_noaa_MD.tif: schannel: next InitializeSecurityContext failed: Unknown error (0x80092012) - The revocation function was unable to check revocation for the certificate.
+[2023-04-21 09:04:24,715][pyproj][DEBUG] - PROJ_ERROR: Cannot open https://cdn.proj.org/us_noaa_njhpgn.tif: schannel: next InitializeSecurityContext failed: Unknown error (0x80092012) - The revocation function was unable to check revocation for the certificate.
+[2023-04-21 09:04:24,891][pyproj][DEBUG] - PROJ_ERROR: Cannot open https://cdn.proj.org/us_noaa_ethpgn.tif: schannel: next InitializeSecurityContext failed: Unknown error (0x80092012) - The revocation function was unable to check revocation for the certificate.
+[2023-04-21 09:04:25,027][pyproj][DEBUG] - PROJ_ERROR: Cannot open https://cdn.proj.org/us_noaa_mnhpgn.tif: schannel: next InitializeSecurityContext failed: Unknown error (0x80092012) - The revocation function was unable to check revocation for the certificate.
+[2023-04-21 09:04:25,163][pyproj][DEBUG] - PROJ_ERROR: Cannot open https://cdn.proj.org/us_noaa_nbhpgn.tif: schannel: next InitializeSecurityContext failed: Unknown error (0x80092012) - The revocation function was unable to check revocation for the certificate.
+[2023-04-21 09:04:25,291][pyproj][DEBUG] - PROJ_ERROR: Cannot open https://cdn.proj.org/us_noaa_kshpgn.tif: schannel: next InitializeSecurityContext failed: Unknown error (0x80092012) - The revocation function was unable to check revocation for the certificate.
+[2023-04-21 09:04:25,931][pyproj][DEBUG] - PROJ_ERROR: Cannot open https://cdn.proj.org/us_noaa_emhpgn.tif: schannel: next InitializeSecurityContext failed: Unknown error (0x80092012) - The revocation function was unable to check revocation for the certificate.
+[2023-04-21 09:04:26,059][pyproj][DEBUG] - PROJ_ERROR: Cannot open https://cdn.proj.org/us_noaa_nmhpgn.tif: schannel: next InitializeSecurityContext failed: Unknown error (0x80092012) - The revocation function was unable to check revocation for the certificate.
+[2023-04-21 09:04:27,195][pyproj][DEBUG] - PROJ_ERROR: Cannot open https://cdn.proj.org/us_noaa_uthpgn.tif: schannel: next InitializeSecurityContext failed: Unknown error (0x80092012) - The revocation function was unable to check revocation for the certificate.
+[2023-04-21 09:04:27,851][root][ERROR] - The key download_data as a None value.
+[2023-04-21 09:04:27,859][root][ERROR] - The key multiprocessing as a None value.
+[2023-04-21 09:04:27,859][root][ERROR] - The key write_dest_raster as a None value.
+[2023-04-21 09:04:27,859][root][ERROR] - The key clahe_clip_limit as a None value.
+[2023-04-21 09:04:28,083][tiling_segmentation][WARNING] - Debug mode activated. Some debug features may mobilize extra disk space and cause delays in execution.

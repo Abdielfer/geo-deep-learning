@@ -1,0 +1,13 @@
+[2023-04-21 08:39:10,953][root][INFO] - 
+Overwritten parameters in the config: 
+mode=tiling
+[2023-04-21 08:39:10,953][root][INFO] - 
+---------------------------------------
+Let's start tiling for segmentation !!!
+---------------------------------------
+[2023-04-21 08:39:12,953][matplotlib][DEBUG] - matplotlib data path: C:\Users\abfernan\.conda\envs\geo_deep_env\lib\site-packages\matplotlib\mpl-data
+[2023-04-21 08:39:12,977][matplotlib][DEBUG] - CONFIGDIR=C:\Users\abfernan\.matplotlib
+[2023-04-21 08:39:12,977][matplotlib][DEBUG] - interactive is False
+[2023-04-21 08:39:12,977][matplotlib][DEBUG] - platform is win32
+[2023-04-21 08:39:13,185][matplotlib][DEBUG] - CACHEDIR=C:\Users\abfernan\.matplotlib
+[2023-04-21 08:39:13,201][matplotlib.font_manager][DEBUG] - Using fontManager instance from C:\Users\abfernan\.matplotlib\fontlist-v330.json

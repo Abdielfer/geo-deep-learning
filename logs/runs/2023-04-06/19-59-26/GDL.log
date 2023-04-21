@@ -1,0 +1,46 @@
+[2023-04-06 19:59:26,449][root][INFO] - 
+Overwritten parameters in the config: 
+mode=tiling
+[2023-04-06 19:59:26,450][root][INFO] - 
+---------------------------------------
+Let's start tiling for segmentation !!!
+---------------------------------------
+[2023-04-06 19:59:28,040][root][ERROR] - The key download_data as a None value.
+[2023-04-06 19:59:28,041][root][ERROR] - The key multiprocessing as a None value.
+[2023-04-06 19:59:28,042][root][ERROR] - The key write_dest_raster as a None value.
+[2023-04-06 19:59:28,042][root][ERROR] - The key clahe_clip_limit as a None value.
+[2023-04-06 19:59:28,163][dataset.aoi][INFO] - 
+	Successfully read csv file: rawImg.csv
+	Number of rows: 1
+	Copying first row:
+{'tif': 'C:\\Users\\abfernan\\CrossCanFloodMapping\\RawData\\TestTiling\\CA_Lethbridge_Subset.tif', 'gpkg': 'C:\\Users\\abfernan\\CrossCanFloodMapping\\RawData\\TestTiling\\ca_lethbridge_subset.gpkg', 'split': 'trn', 'aoi_id': None}
+
+[2023-04-06 19:59:28,433][tiling_segmentation][INFO] - Patches will be written to C:\Users\abfernan\CrossCanFloodMapping\RawData\TestTiling\template_project
+
+
+[2023-04-06 19:59:28,434][tiling_segmentation][INFO] - Preparing patches 
+	Samples_size: 384 
+[2023-04-06 19:59:41,623][tiling_segmentation][INFO] - Cropping raster patches...
+[2023-04-06 19:59:42,263][tiling_segmentation][INFO] - Tiling done. Creating pixel masks from clipped geojsons...
+[2023-04-06 20:00:10,885][tiling_segmentation][INFO] - 
+Expected val ratio: 30 %
+Actual val ratio: 30.10 %
+[2023-04-06 20:00:10,886][tiling_segmentation][INFO] - 
+Dataset: trn
+	Filters:
+	 - Minimumum non-zero values (aka minimum annotated percentage): 10%
+	Kept: 144
+	Discarded: 355
+[2023-04-06 20:00:10,886][tiling_segmentation][INFO] - 
+Dataset: val
+	Total patches: 62
+[2023-04-06 20:00:10,886][tiling_segmentation][INFO] - 
+End of process. See tiled dataset lists:
+[2023-04-06 20:00:10,887][tiling_segmentation][INFO] - trn: C:\Users\abfernan\CrossCanFloodMapping\RawData\TestTiling\template_project\template_project_feat1_min-annot10_trn.csv
+[2023-04-06 20:00:10,887][tiling_segmentation][INFO] - val: C:\Users\abfernan\CrossCanFloodMapping\RawData\TestTiling\template_project\template_project_feat1_min-annot10_val.csv
+[2023-04-06 20:00:11,017][root][INFO] - 
+-----------------
+End of tiling !!!
+Elapsed time: 44.57s
+-----------------
+

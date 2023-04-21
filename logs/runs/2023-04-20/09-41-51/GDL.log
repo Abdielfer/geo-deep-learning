@@ -1,0 +1,9 @@
+[2023-04-20 09:41:51,650][root][INFO] - 
+Overwritten parameters in the config: 
+mode=tiling
+[2023-04-20 09:41:51,651][root][INFO] - 
+---------------------------------------
+Let's start tiling for segmentation !!!
+---------------------------------------
+[2023-04-20 09:41:54,770][root][CRITICAL] - Couldn't locate path: C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\Class1RawData.csv.
+Provided key: raw_data_csv

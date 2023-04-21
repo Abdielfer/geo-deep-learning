@@ -1,0 +1,1509 @@
+[2023-04-21 09:29:56,446][root][INFO] - 
+Overwritten parameters in the config: 
+mode=tiling
+[2023-04-21 09:29:56,454][root][INFO] - 
+---------------------------------------
+Let's start tiling for segmentation !!!
+---------------------------------------
+[2023-04-21 09:29:56,686][matplotlib][DEBUG] - matplotlib data path: C:\Users\abfernan\.conda\envs\geo_deep_env\lib\site-packages\matplotlib\mpl-data
+[2023-04-21 09:29:56,686][matplotlib][DEBUG] - CONFIGDIR=C:\Users\abfernan\.matplotlib
+[2023-04-21 09:29:56,686][matplotlib][DEBUG] - interactive is False
+[2023-04-21 09:29:56,694][matplotlib][DEBUG] - platform is win32
+[2023-04-21 09:29:56,750][matplotlib][DEBUG] - CACHEDIR=C:\Users\abfernan\.matplotlib
+[2023-04-21 09:29:56,750][matplotlib.font_manager][DEBUG] - Using fontManager instance from C:\Users\abfernan\.matplotlib\fontlist-v330.json
+[2023-04-21 09:29:57,214][fiona.session][DEBUG] - Could not import boto3, continuing with reduced functionality.
+[2023-04-21 09:29:57,222][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:29:57,222][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:29:58,870][root][ERROR] - The key download_data as a None value.
+[2023-04-21 09:29:58,870][root][ERROR] - The key multiprocessing as a None value.
+[2023-04-21 09:29:58,878][root][ERROR] - The key write_dest_raster as a None value.
+[2023-04-21 09:29:58,878][root][ERROR] - The key clahe_clip_limit as a None value.
+[2023-04-21 09:29:59,502][tiling_segmentation][WARNING] - Data path exists: C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\Class1RawData.csv\template_project. Make sure patches belong to the same experiment.
+[2023-04-21 09:29:59,502][tiling_segmentation][WARNING] - Debug mode activated. Some debug features may mobilize extra disk space and cause delays in execution.
+[2023-04-21 09:29:59,526][dataset.aoi][INFO] - 
+	Successfully read csv file: Class1RawData.csv
+	Number of rows: 15
+	Copying first row:
+{'tif': 'C:\\Users\\abfernan\\CrossCanFloodMapping\\DatasetCNNFlood\\RawData\\Class1\\CA_Lethbridge.tif', 'gpkg': 'C:\\Users\\abfernan\\CrossCanFloodMapping\\DatasetCNNFlood\\RawData\\Class1\\CA_Lethbridge_C1.gpkg', 'split': 'trn'}
+
+[2023-04-21 09:29:59,606][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B20E0>
+[2023-04-21 09:29:59,614][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:29:59,614][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:29:59,614][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B2110> created
+[2023-04-21 09:29:59,614][rasterio._filepath][DEBUG] - Installing FilePath filesystem handler plugin...
+[2023-04-21 09:29:59,614][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:29:59,614][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:29:59,614][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B2110>.
+[2023-04-21 09:29:59,614][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B20E0>
+[2023-04-21 09:29:59,614][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:29:59,654][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:29:59,654][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/CA_Lethbridge.tif' mode='r'> is started.
+[2023-04-21 09:29:59,654][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B20E0>
+[2023-04-21 09:29:59,662][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B2110> options
+[2023-04-21 09:29:59,662][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B2110>.
+[2023-04-21 09:29:59,662][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:29:59,662][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B20E0>
+[2023-04-21 09:29:59,662][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/CA_Lethbridge.tif' mode='r'>
+Size: 33701550
+Extended check: False
+[2023-04-21 09:29:59,694][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B20E0>
+[2023-04-21 09:29:59,694][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:29:59,694][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:29:59,694][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B1F90> created
+[2023-04-21 09:29:59,694][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:29:59,694][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:29:59,694][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B1F90>.
+[2023-04-21 09:29:59,694][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B20E0>
+[2023-04-21 09:29:59,694][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:29:59,702][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:29:59,702][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/CA_Lethbridge.tif' mode='r'> is started.
+[2023-04-21 09:29:59,702][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B20E0>
+[2023-04-21 09:29:59,702][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B1F90> options
+[2023-04-21 09:29:59,702][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B1F90>.
+[2023-04-21 09:29:59,702][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:29:59,702][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B20E0>
+[2023-04-21 09:29:59,702][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B2170>
+[2023-04-21 09:29:59,702][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:29:59,702][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:29:59,702][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B1F90> created
+[2023-04-21 09:29:59,710][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:29:59,710][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:29:59,710][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B1F90>.
+[2023-04-21 09:29:59,710][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B2170>
+[2023-04-21 09:29:59,710][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:29:59,710][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:29:59,710][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/CA_Lethbridge.tif' mode='r'> is started.
+[2023-04-21 09:29:59,710][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B2170>
+[2023-04-21 09:29:59,718][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B1F90> options
+[2023-04-21 09:29:59,718][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B1F90>.
+[2023-04-21 09:29:59,718][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:29:59,718][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B2170>
+[2023-04-21 09:29:59,718][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/CA_Lethbridge.tif' mode='r'>
+Size: 33701550
+Extended check: False
+[2023-04-21 09:29:59,718][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B2140>
+[2023-04-21 09:29:59,718][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:29:59,718][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:29:59,718][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B1F30> created
+[2023-04-21 09:29:59,718][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:29:59,718][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:29:59,718][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B1F30>.
+[2023-04-21 09:29:59,718][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B2140>
+[2023-04-21 09:29:59,718][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:29:59,726][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:29:59,726][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/CA_Lethbridge.tif' mode='r'> is started.
+[2023-04-21 09:29:59,726][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B2140>
+[2023-04-21 09:29:59,726][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B1F30> options
+[2023-04-21 09:29:59,726][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B1F30>.
+[2023-04-21 09:29:59,726][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:29:59,726][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B2140>
+[2023-04-21 09:29:59,726][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:29:59,734][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:29:59,846][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:29:59,846][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:29:59,846][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:29:59,846][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:29:59,846][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'31966', c_name=b'EPSG'
+[2023-04-21 09:29:59,846][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:29:59,846][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:29:59,846][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:29:59,846][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:29:59,886][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:29:59,894][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:29:59,894][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:29:59,894][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:29:59,902][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:29:59,902][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:29:59,910][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:29:59,910][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:29:59,910][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'31966', c_name=b'EPSG'
+[2023-04-21 09:29:59,910][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:29:59,910][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:29:59,910][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:29:59,910][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:29:59,934][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:29:59,934][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:29:59,950][rasterio.crs][DEBUG] - Matched. confidence=100, c_code=b'31966', c_name=b'EPSG'
+[2023-04-21 09:30:00,375][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B16F0>
+[2023-04-21 09:30:00,383][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:00,383][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:00,383][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B1DB0> created
+[2023-04-21 09:30:00,383][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:00,383][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:00,383][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B1DB0>.
+[2023-04-21 09:30:00,383][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B16F0>
+[2023-04-21 09:30:00,383][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:00,417][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:00,417][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Hamilton_Niagara_WellandLyonsSingers.tif' mode='r'> is started.
+[2023-04-21 09:30:00,425][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B16F0>
+[2023-04-21 09:30:00,425][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B1DB0> options
+[2023-04-21 09:30:00,425][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B1DB0>.
+[2023-04-21 09:30:00,425][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:00,425][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B16F0>
+[2023-04-21 09:30:00,425][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Hamilton_Niagara_WellandLyonsSingers.tif' mode='r'>
+Size: 389554910
+Extended check: False
+[2023-04-21 09:30:00,714][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B16F0>
+[2023-04-21 09:30:00,722][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:00,722][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:00,722][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B20E0> created
+[2023-04-21 09:30:00,722][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:00,722][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:00,722][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B20E0>.
+[2023-04-21 09:30:00,730][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B16F0>
+[2023-04-21 09:30:00,732][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:00,732][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:00,732][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Hamilton_Niagara_WellandLyonsSingers.tif' mode='r'> is started.
+[2023-04-21 09:30:00,740][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B16F0>
+[2023-04-21 09:30:00,740][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B20E0> options
+[2023-04-21 09:30:00,742][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B20E0>.
+[2023-04-21 09:30:00,742][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:00,742][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B16F0>
+[2023-04-21 09:30:00,742][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B1DE0>
+[2023-04-21 09:30:00,742][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:00,742][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:00,742][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B20E0> created
+[2023-04-21 09:30:00,742][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:00,750][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:00,750][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B20E0>.
+[2023-04-21 09:30:00,750][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B1DE0>
+[2023-04-21 09:30:00,750][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:00,758][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:00,758][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Hamilton_Niagara_WellandLyonsSingers.tif' mode='r'> is started.
+[2023-04-21 09:30:00,758][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B1DE0>
+[2023-04-21 09:30:00,758][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B20E0> options
+[2023-04-21 09:30:00,758][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B20E0>.
+[2023-04-21 09:30:00,758][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:00,758][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B1DE0>
+[2023-04-21 09:30:00,758][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Hamilton_Niagara_WellandLyonsSingers.tif' mode='r'>
+Size: 389554910
+Extended check: False
+[2023-04-21 09:30:00,758][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B1FF0>
+[2023-04-21 09:30:00,758][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:00,758][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:00,758][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B27A0> created
+[2023-04-21 09:30:00,766][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:00,766][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:00,766][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B27A0>.
+[2023-04-21 09:30:00,766][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B1FF0>
+[2023-04-21 09:30:00,766][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:00,774][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:00,774][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Hamilton_Niagara_WellandLyonsSingers.tif' mode='r'> is started.
+[2023-04-21 09:30:00,774][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B1FF0>
+[2023-04-21 09:30:00,774][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B27A0> options
+[2023-04-21 09:30:00,774][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B27A0>.
+[2023-04-21 09:30:00,774][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:00,774][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B1FF0>
+[2023-04-21 09:30:00,782][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:00,782][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:00,840][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:00,840][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:00,840][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:00,847][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:00,847][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'2958', c_name=b'EPSG'
+[2023-04-21 09:30:00,847][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:00,847][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:00,847][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:00,847][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:00,916][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:00,916][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:00,916][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:00,916][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:00,939][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:00,939][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:00,939][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:00,939][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:00,939][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'2958', c_name=b'EPSG'
+[2023-04-21 09:30:00,939][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:00,939][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:00,939][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:00,947][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:01,085][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:01,085][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:01,093][rasterio.crs][DEBUG] - Matched. confidence=100, c_code=b'2958', c_name=b'EPSG'
+[2023-04-21 09:30:01,133][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431233A0>
+[2023-04-21 09:30:01,133][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:01,133][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:01,133][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x000002553FBF63E0> created
+[2023-04-21 09:30:01,141][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:01,141][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:01,141][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x000002553FBF63E0>.
+[2023-04-21 09:30:01,141][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431233A0>
+[2023-04-21 09:30:01,141][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:01,165][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:01,165][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Hamilton_Niagara_WingnellEagleBearsBeaver.tif' mode='r'> is started.
+[2023-04-21 09:30:01,165][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431233A0>
+[2023-04-21 09:30:01,165][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x000002553FBF63E0> options
+[2023-04-21 09:30:01,165][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x000002553FBF63E0>.
+[2023-04-21 09:30:01,165][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:01,165][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431233A0>
+[2023-04-21 09:30:01,165][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Hamilton_Niagara_WingnellEagleBearsBeaver.tif' mode='r'>
+Size: 18616494
+Extended check: False
+[2023-04-21 09:30:01,181][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x0000025543123280>
+[2023-04-21 09:30:01,181][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:01,181][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:01,181][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431232E0> created
+[2023-04-21 09:30:01,189][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:01,189][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:01,189][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431232E0>.
+[2023-04-21 09:30:01,189][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x0000025543123280>
+[2023-04-21 09:30:01,189][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:01,197][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:01,197][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Hamilton_Niagara_WingnellEagleBearsBeaver.tif' mode='r'> is started.
+[2023-04-21 09:30:01,197][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x0000025543123280>
+[2023-04-21 09:30:01,197][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431232E0> options
+[2023-04-21 09:30:01,197][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431232E0>.
+[2023-04-21 09:30:01,197][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:01,197][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x0000025543123280>
+[2023-04-21 09:30:01,197][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x000002553FBF4940>
+[2023-04-21 09:30:01,197][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:01,197][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:01,197][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B2410> created
+[2023-04-21 09:30:01,205][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:01,205][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:01,205][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B2410>.
+[2023-04-21 09:30:01,205][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x000002553FBF4940>
+[2023-04-21 09:30:01,205][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:01,205][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:01,213][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Hamilton_Niagara_WingnellEagleBearsBeaver.tif' mode='r'> is started.
+[2023-04-21 09:30:01,213][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x000002553FBF4940>
+[2023-04-21 09:30:01,213][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B2410> options
+[2023-04-21 09:30:01,213][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B2410>.
+[2023-04-21 09:30:01,213][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:01,213][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x000002553FBF4940>
+[2023-04-21 09:30:01,213][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Hamilton_Niagara_WingnellEagleBearsBeaver.tif' mode='r'>
+Size: 18616494
+Extended check: False
+[2023-04-21 09:30:01,213][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x000002553FBF63E0>
+[2023-04-21 09:30:01,213][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:01,213][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:01,213][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x000002553FBF4B50> created
+[2023-04-21 09:30:01,221][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:01,221][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:01,221][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x000002553FBF4B50>.
+[2023-04-21 09:30:01,221][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x000002553FBF63E0>
+[2023-04-21 09:30:01,221][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:01,221][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:01,221][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Hamilton_Niagara_WingnellEagleBearsBeaver.tif' mode='r'> is started.
+[2023-04-21 09:30:01,221][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x000002553FBF63E0>
+[2023-04-21 09:30:01,229][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x000002553FBF4B50> options
+[2023-04-21 09:30:01,229][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x000002553FBF4B50>.
+[2023-04-21 09:30:01,229][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:01,229][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x000002553FBF63E0>
+[2023-04-21 09:30:01,229][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:01,229][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:01,261][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:01,261][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:01,261][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:01,261][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:01,261][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'2958', c_name=b'EPSG'
+[2023-04-21 09:30:01,269][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:01,269][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:01,269][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:01,269][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:01,269][fiona.ogrext][DEBUG] - Next index: 2
+[2023-04-21 09:30:01,277][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:01,277][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:01,285][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:01,285][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:01,293][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:01,293][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:01,293][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:01,293][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:01,293][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'2958', c_name=b'EPSG'
+[2023-04-21 09:30:01,293][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:01,293][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:01,293][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:01,293][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:01,301][fiona.ogrext][DEBUG] - Next index: 2
+[2023-04-21 09:30:01,309][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:01,309][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:01,317][rasterio.crs][DEBUG] - Matched. confidence=100, c_code=b'2958', c_name=b'EPSG'
+[2023-04-21 09:30:01,381][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x000002553FBF63E0>
+[2023-04-21 09:30:01,381][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:01,381][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:01,381][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x000002553FBF4B50> created
+[2023-04-21 09:30:01,389][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:01,389][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:01,389][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x000002553FBF4B50>.
+[2023-04-21 09:30:01,389][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x000002553FBF63E0>
+[2023-04-21 09:30:01,389][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:01,405][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:01,413][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Hamilton_RichardsonFrancisWalkerCreek.tif' mode='r'> is started.
+[2023-04-21 09:30:01,413][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x000002553FBF63E0>
+[2023-04-21 09:30:01,413][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x000002553FBF4B50> options
+[2023-04-21 09:30:01,413][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x000002553FBF4B50>.
+[2023-04-21 09:30:01,413][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:01,413][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x000002553FBF63E0>
+[2023-04-21 09:30:01,413][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Hamilton_RichardsonFrancisWalkerCreek.tif' mode='r'>
+Size: 34346650
+Extended check: False
+[2023-04-21 09:30:01,437][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x000002553FBF4940>
+[2023-04-21 09:30:01,437][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:01,437][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:01,445][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431231F0> created
+[2023-04-21 09:30:01,445][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:01,445][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:01,445][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431231F0>.
+[2023-04-21 09:30:01,445][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x000002553FBF4940>
+[2023-04-21 09:30:01,453][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:01,453][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:01,461][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Hamilton_RichardsonFrancisWalkerCreek.tif' mode='r'> is started.
+[2023-04-21 09:30:01,461][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x000002553FBF4940>
+[2023-04-21 09:30:01,461][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431231F0> options
+[2023-04-21 09:30:01,461][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431231F0>.
+[2023-04-21 09:30:01,461][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:01,461][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x000002553FBF4940>
+[2023-04-21 09:30:01,461][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B1120>
+[2023-04-21 09:30:01,461][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:01,461][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:01,461][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B0550> created
+[2023-04-21 09:30:01,469][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:01,469][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:01,469][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B0550>.
+[2023-04-21 09:30:01,469][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B1120>
+[2023-04-21 09:30:01,469][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:01,469][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:01,477][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Hamilton_RichardsonFrancisWalkerCreek.tif' mode='r'> is started.
+[2023-04-21 09:30:01,477][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B1120>
+[2023-04-21 09:30:01,477][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B0550> options
+[2023-04-21 09:30:01,477][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B0550>.
+[2023-04-21 09:30:01,477][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:01,477][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B1120>
+[2023-04-21 09:30:01,477][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Hamilton_RichardsonFrancisWalkerCreek.tif' mode='r'>
+Size: 34346650
+Extended check: False
+[2023-04-21 09:30:01,477][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B1780>
+[2023-04-21 09:30:01,477][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:01,485][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:01,485][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B1600> created
+[2023-04-21 09:30:01,485][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:01,485][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:01,485][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B1600>.
+[2023-04-21 09:30:01,485][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B1780>
+[2023-04-21 09:30:01,485][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:01,485][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:01,493][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Hamilton_RichardsonFrancisWalkerCreek.tif' mode='r'> is started.
+[2023-04-21 09:30:01,493][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B1780>
+[2023-04-21 09:30:01,493][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B1600> options
+[2023-04-21 09:30:01,493][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B1600>.
+[2023-04-21 09:30:01,493][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:01,493][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B1780>
+[2023-04-21 09:30:01,493][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:01,493][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:01,525][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:01,525][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:01,525][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:01,525][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:01,533][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'2958', c_name=b'EPSG'
+[2023-04-21 09:30:01,533][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:01,533][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:01,533][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:01,533][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:01,541][fiona.ogrext][DEBUG] - Next index: 2
+[2023-04-21 09:30:01,549][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:01,549][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:01,549][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:01,549][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:01,557][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:01,557][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:01,557][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:01,557][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:01,565][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'2958', c_name=b'EPSG'
+[2023-04-21 09:30:01,565][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:01,565][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:01,565][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:01,565][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:01,573][fiona.ogrext][DEBUG] - Next index: 2
+[2023-04-21 09:30:01,573][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:01,581][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:01,581][rasterio.crs][DEBUG] - Matched. confidence=100, c_code=b'2958', c_name=b'EPSG'
+[2023-04-21 09:30:01,621][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B32B0>
+[2023-04-21 09:30:01,621][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:01,621][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:01,621][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B1000> created
+[2023-04-21 09:30:01,629][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:01,629][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:01,629][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B1000>.
+[2023-04-21 09:30:01,629][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B32B0>
+[2023-04-21 09:30:01,629][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:01,653][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:01,653][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NF_Shearstown.tif' mode='r'> is started.
+[2023-04-21 09:30:01,653][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B32B0>
+[2023-04-21 09:30:01,653][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B1000> options
+[2023-04-21 09:30:01,653][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B1000>.
+[2023-04-21 09:30:01,653][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:01,653][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B32B0>
+[2023-04-21 09:30:01,653][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NF_Shearstown.tif' mode='r'>
+Size: 10520890
+Extended check: False
+[2023-04-21 09:30:01,669][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431233A0>
+[2023-04-21 09:30:01,677][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:01,677][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:01,677][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B2800> created
+[2023-04-21 09:30:01,677][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:01,677][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:01,677][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B2800>.
+[2023-04-21 09:30:01,677][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431233A0>
+[2023-04-21 09:30:01,685][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:01,685][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:01,685][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NF_Shearstown.tif' mode='r'> is started.
+[2023-04-21 09:30:01,685][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431233A0>
+[2023-04-21 09:30:01,685][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B2800> options
+[2023-04-21 09:30:01,685][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B2800>.
+[2023-04-21 09:30:01,685][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:01,693][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431233A0>
+[2023-04-21 09:30:01,693][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B2F20>
+[2023-04-21 09:30:01,693][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:01,693][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:01,693][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B2800> created
+[2023-04-21 09:30:01,693][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:01,701][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:01,701][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B2800>.
+[2023-04-21 09:30:01,701][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B2F20>
+[2023-04-21 09:30:01,701][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:01,701][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:01,701][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NF_Shearstown.tif' mode='r'> is started.
+[2023-04-21 09:30:01,709][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B2F20>
+[2023-04-21 09:30:01,709][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B2800> options
+[2023-04-21 09:30:01,709][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B2800>.
+[2023-04-21 09:30:01,709][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:01,709][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B2F20>
+[2023-04-21 09:30:01,709][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NF_Shearstown.tif' mode='r'>
+Size: 10520890
+Extended check: False
+[2023-04-21 09:30:01,709][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B0820>
+[2023-04-21 09:30:01,709][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:01,709][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:01,717][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B0A60> created
+[2023-04-21 09:30:01,717][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:01,717][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:01,717][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B0A60>.
+[2023-04-21 09:30:01,717][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B0820>
+[2023-04-21 09:30:01,717][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:01,717][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:01,725][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NF_Shearstown.tif' mode='r'> is started.
+[2023-04-21 09:30:01,725][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B0820>
+[2023-04-21 09:30:01,725][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B0A60> options
+[2023-04-21 09:30:01,725][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B0A60>.
+[2023-04-21 09:30:01,725][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:01,725][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B0820>
+[2023-04-21 09:30:01,725][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:01,725][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:01,773][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:01,773][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:01,773][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:01,773][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:01,773][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'31976', c_name=b'EPSG'
+[2023-04-21 09:30:01,773][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:01,773][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:01,773][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:01,773][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:01,821][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:01,821][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:01,821][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:01,821][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:01,829][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:01,837][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:01,837][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:01,837][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:01,837][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'31976', c_name=b'EPSG'
+[2023-04-21 09:30:01,837][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:01,837][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:01,837][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:01,837][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:01,885][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:01,885][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:01,973][rasterio.crs][DEBUG] - Matched. confidence=100, c_code=b'31976', c_name=b'EPSG'
+[2023-04-21 09:30:02,061][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B0F10>
+[2023-04-21 09:30:02,061][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:02,069][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:02,069][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B0D30> created
+[2023-04-21 09:30:02,069][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:02,069][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:02,069][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B0D30>.
+[2023-04-21 09:30:02,077][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B0F10>
+[2023-04-21 09:30:02,077][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:02,098][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:02,106][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NF_StJohns.tif' mode='r'> is started.
+[2023-04-21 09:30:02,106][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B0F10>
+[2023-04-21 09:30:02,108][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B0D30> options
+[2023-04-21 09:30:02,108][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B0D30>.
+[2023-04-21 09:30:02,108][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:02,108][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B0F10>
+[2023-04-21 09:30:02,108][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NF_StJohns.tif' mode='r'>
+Size: 55077322
+Extended check: False
+[2023-04-21 09:30:02,140][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B0F10>
+[2023-04-21 09:30:02,140][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:02,140][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:02,140][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B0400> created
+[2023-04-21 09:30:02,148][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:02,148][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:02,148][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B0400>.
+[2023-04-21 09:30:02,148][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B0F10>
+[2023-04-21 09:30:02,156][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:02,156][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:02,156][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NF_StJohns.tif' mode='r'> is started.
+[2023-04-21 09:30:02,164][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B0F10>
+[2023-04-21 09:30:02,164][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B0400> options
+[2023-04-21 09:30:02,164][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B0400>.
+[2023-04-21 09:30:02,164][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:02,164][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B0F10>
+[2023-04-21 09:30:02,164][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B0910>
+[2023-04-21 09:30:02,172][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:02,172][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:02,172][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B0400> created
+[2023-04-21 09:30:02,172][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:02,172][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:02,172][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B0400>.
+[2023-04-21 09:30:02,180][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B0910>
+[2023-04-21 09:30:02,180][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:02,180][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:02,180][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NF_StJohns.tif' mode='r'> is started.
+[2023-04-21 09:30:02,180][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B0910>
+[2023-04-21 09:30:02,180][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B0400> options
+[2023-04-21 09:30:02,180][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B0400>.
+[2023-04-21 09:30:02,188][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:02,188][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B0910>
+[2023-04-21 09:30:02,188][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NF_StJohns.tif' mode='r'>
+Size: 55077322
+Extended check: False
+[2023-04-21 09:30:02,188][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B32B0>
+[2023-04-21 09:30:02,188][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:02,188][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:02,188][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B0EE0> created
+[2023-04-21 09:30:02,188][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:02,188][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:02,188][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B0EE0>.
+[2023-04-21 09:30:02,196][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B32B0>
+[2023-04-21 09:30:02,196][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:02,196][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:02,196][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NF_StJohns.tif' mode='r'> is started.
+[2023-04-21 09:30:02,196][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B32B0>
+[2023-04-21 09:30:02,196][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B0EE0> options
+[2023-04-21 09:30:02,196][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B0EE0>.
+[2023-04-21 09:30:02,196][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:02,196][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B32B0>
+[2023-04-21 09:30:02,204][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:02,204][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:02,236][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:02,236][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:02,236][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:02,236][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:02,236][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'3761', c_name=b'EPSG'
+[2023-04-21 09:30:02,244][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:02,244][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:02,244][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:02,244][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:02,252][fiona.ogrext][DEBUG] - Next index: 2
+[2023-04-21 09:30:02,300][fiona.ogrext][DEBUG] - Next index: 3
+[2023-04-21 09:30:02,380][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:02,380][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:02,380][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:02,380][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:02,388][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:02,388][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:02,388][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:02,388][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:02,396][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'3761', c_name=b'EPSG'
+[2023-04-21 09:30:02,396][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:02,396][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:02,396][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:02,396][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:02,404][fiona.ogrext][DEBUG] - Next index: 2
+[2023-04-21 09:30:02,444][fiona.ogrext][DEBUG] - Next index: 3
+[2023-04-21 09:30:02,604][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:02,604][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:02,652][rasterio.crs][DEBUG] - Matched. confidence=100, c_code=b'3761', c_name=b'EPSG'
+[2023-04-21 09:30:02,932][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B29E0>
+[2023-04-21 09:30:02,940][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:02,940][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:02,940][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B0EE0> created
+[2023-04-21 09:30:02,940][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:02,940][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:02,940][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B0EE0>.
+[2023-04-21 09:30:02,948][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B29E0>
+[2023-04-21 09:30:02,948][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:02,980][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:02,980][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NL_Churchill.tif' mode='r'> is started.
+[2023-04-21 09:30:02,980][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B29E0>
+[2023-04-21 09:30:02,988][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B0EE0> options
+[2023-04-21 09:30:02,988][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B0EE0>.
+[2023-04-21 09:30:02,988][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:02,988][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B29E0>
+[2023-04-21 09:30:02,988][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NL_Churchill.tif' mode='r'>
+Size: 288072726
+Extended check: False
+[2023-04-21 09:30:03,217][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B29E0>
+[2023-04-21 09:30:03,217][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:03,217][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:03,217][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B1150> created
+[2023-04-21 09:30:03,217][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:03,217][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:03,225][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B1150>.
+[2023-04-21 09:30:03,225][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B29E0>
+[2023-04-21 09:30:03,225][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:03,233][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:03,233][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NL_Churchill.tif' mode='r'> is started.
+[2023-04-21 09:30:03,233][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B29E0>
+[2023-04-21 09:30:03,233][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B1150> options
+[2023-04-21 09:30:03,233][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B1150>.
+[2023-04-21 09:30:03,233][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:03,233][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B29E0>
+[2023-04-21 09:30:03,242][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B0D90>
+[2023-04-21 09:30:03,242][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:03,242][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:03,242][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B1150> created
+[2023-04-21 09:30:03,242][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:03,249][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:03,249][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B1150>.
+[2023-04-21 09:30:03,249][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B0D90>
+[2023-04-21 09:30:03,249][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:03,257][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:03,257][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NL_Churchill.tif' mode='r'> is started.
+[2023-04-21 09:30:03,257][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B0D90>
+[2023-04-21 09:30:03,257][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B1150> options
+[2023-04-21 09:30:03,257][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B1150>.
+[2023-04-21 09:30:03,257][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:03,257][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B0D90>
+[2023-04-21 09:30:03,265][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NL_Churchill.tif' mode='r'>
+Size: 288072726
+Extended check: False
+[2023-04-21 09:30:03,265][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B2AA0>
+[2023-04-21 09:30:03,265][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:03,265][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:03,265][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B04F0> created
+[2023-04-21 09:30:03,273][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:03,273][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:03,273][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B04F0>.
+[2023-04-21 09:30:03,273][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B2AA0>
+[2023-04-21 09:30:03,273][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:03,281][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:03,281][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NL_Churchill.tif' mode='r'> is started.
+[2023-04-21 09:30:03,281][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B2AA0>
+[2023-04-21 09:30:03,281][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B04F0> options
+[2023-04-21 09:30:03,289][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B04F0>.
+[2023-04-21 09:30:03,289][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:03,289][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B2AA0>
+[2023-04-21 09:30:03,289][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:03,289][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:03,342][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:03,342][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:03,342][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:03,342][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:03,350][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'26920', c_name=b'EPSG'
+[2023-04-21 09:30:03,350][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:03,352][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:03,352][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:03,352][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:04,037][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:04,037][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:04,037][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:04,037][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:04,045][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:04,045][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:04,045][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:04,045][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:04,045][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'26920', c_name=b'EPSG'
+[2023-04-21 09:30:04,045][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:04,045][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:04,053][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:04,053][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:04,690][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:04,698][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:08,885][rasterio.crs][DEBUG] - Matched. confidence=100, c_code=b'26920', c_name=b'EPSG'
+[2023-04-21 09:30:09,080][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B2A10>
+[2023-04-21 09:30:09,080][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:09,080][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:09,080][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B0F10> created
+[2023-04-21 09:30:09,080][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:09,080][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:09,080][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B0F10>.
+[2023-04-21 09:30:09,080][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B2A10>
+[2023-04-21 09:30:09,080][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:09,104][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:09,104][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NL_Exploits.tif' mode='r'> is started.
+[2023-04-21 09:30:09,104][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B2A10>
+[2023-04-21 09:30:09,104][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B0F10> options
+[2023-04-21 09:30:09,104][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B0F10>.
+[2023-04-21 09:30:09,104][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:09,104][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B2A10>
+[2023-04-21 09:30:09,112][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NL_Exploits.tif' mode='r'>
+Size: 190075502
+Extended check: False
+[2023-04-21 09:30:09,232][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B2A10>
+[2023-04-21 09:30:09,232][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:09,232][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:09,232][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B31F0> created
+[2023-04-21 09:30:09,232][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:09,232][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:09,232][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B31F0>.
+[2023-04-21 09:30:09,232][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B2A10>
+[2023-04-21 09:30:09,240][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:09,240][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:09,240][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NL_Exploits.tif' mode='r'> is started.
+[2023-04-21 09:30:09,240][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B2A10>
+[2023-04-21 09:30:09,240][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B31F0> options
+[2023-04-21 09:30:09,240][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B31F0>.
+[2023-04-21 09:30:09,240][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:09,240][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B2A10>
+[2023-04-21 09:30:09,248][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B1690>
+[2023-04-21 09:30:09,248][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:09,248][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:09,248][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B31F0> created
+[2023-04-21 09:30:09,248][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:09,248][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:09,248][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B31F0>.
+[2023-04-21 09:30:09,248][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B1690>
+[2023-04-21 09:30:09,248][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:09,256][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:09,256][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NL_Exploits.tif' mode='r'> is started.
+[2023-04-21 09:30:09,256][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B1690>
+[2023-04-21 09:30:09,256][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B31F0> options
+[2023-04-21 09:30:09,256][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B31F0>.
+[2023-04-21 09:30:09,256][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:09,256][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B1690>
+[2023-04-21 09:30:09,256][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NL_Exploits.tif' mode='r'>
+Size: 190075502
+Extended check: False
+[2023-04-21 09:30:09,256][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B0100>
+[2023-04-21 09:30:09,256][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:09,256][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:09,256][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B02E0> created
+[2023-04-21 09:30:09,264][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:09,264][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:09,264][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B02E0>.
+[2023-04-21 09:30:09,264][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B0100>
+[2023-04-21 09:30:09,264][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:09,264][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:09,264][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NL_Exploits.tif' mode='r'> is started.
+[2023-04-21 09:30:09,264][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B0100>
+[2023-04-21 09:30:09,264][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B02E0> options
+[2023-04-21 09:30:09,272][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B02E0>.
+[2023-04-21 09:30:09,272][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:09,272][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B0100>
+[2023-04-21 09:30:09,272][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:09,272][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:09,304][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:09,304][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:09,304][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:09,312][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:09,312][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'2962', c_name=b'EPSG'
+[2023-04-21 09:30:09,312][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:09,312][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:09,312][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:09,312][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:10,348][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:10,348][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:10,348][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:10,348][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:10,355][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:10,355][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:10,355][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:10,355][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:10,355][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'2962', c_name=b'EPSG'
+[2023-04-21 09:30:10,355][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:10,355][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:10,363][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:10,363][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:11,322][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:11,322][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:13,698][rasterio.crs][DEBUG] - Matched. confidence=100, c_code=b'2962', c_name=b'EPSG'
+[2023-04-21 09:30:13,730][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B3580>
+[2023-04-21 09:30:13,730][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:13,730][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:13,730][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B3400> created
+[2023-04-21 09:30:13,738][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:13,738][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:13,738][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B3400>.
+[2023-04-21 09:30:13,738][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B3580>
+[2023-04-21 09:30:13,738][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:13,754][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:13,754][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NS_EastKentville.tif' mode='r'> is started.
+[2023-04-21 09:30:13,754][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B3580>
+[2023-04-21 09:30:13,762][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B3400> options
+[2023-04-21 09:30:13,762][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B3400>.
+[2023-04-21 09:30:13,762][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:13,762][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B3580>
+[2023-04-21 09:30:13,762][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NS_EastKentville.tif' mode='r'>
+Size: 7468190
+Extended check: False
+[2023-04-21 09:30:13,770][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B3280>
+[2023-04-21 09:30:13,770][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:13,770][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:13,770][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B0CA0> created
+[2023-04-21 09:30:13,770][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:13,770][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:13,770][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B0CA0>.
+[2023-04-21 09:30:13,770][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B3280>
+[2023-04-21 09:30:13,770][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:13,778][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:13,778][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NS_EastKentville.tif' mode='r'> is started.
+[2023-04-21 09:30:13,778][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B3280>
+[2023-04-21 09:30:13,778][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B0CA0> options
+[2023-04-21 09:30:13,778][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B0CA0>.
+[2023-04-21 09:30:13,778][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:13,778][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B3280>
+[2023-04-21 09:30:13,778][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B3580>
+[2023-04-21 09:30:13,778][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:13,778][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:13,778][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B0CA0> created
+[2023-04-21 09:30:13,778][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:13,778][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:13,786][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B0CA0>.
+[2023-04-21 09:30:13,786][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B3580>
+[2023-04-21 09:30:13,786][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:13,786][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:13,786][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NS_EastKentville.tif' mode='r'> is started.
+[2023-04-21 09:30:13,786][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B3580>
+[2023-04-21 09:30:13,786][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B0CA0> options
+[2023-04-21 09:30:13,786][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B0CA0>.
+[2023-04-21 09:30:13,794][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:13,794][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B3580>
+[2023-04-21 09:30:13,794][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NS_EastKentville.tif' mode='r'>
+Size: 7468190
+Extended check: False
+[2023-04-21 09:30:13,794][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B3B20>
+[2023-04-21 09:30:13,794][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:13,794][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:13,794][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B3010> created
+[2023-04-21 09:30:13,794][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:13,794][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:13,794][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B3010>.
+[2023-04-21 09:30:13,794][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B3B20>
+[2023-04-21 09:30:13,794][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:13,802][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:13,802][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NS_EastKentville.tif' mode='r'> is started.
+[2023-04-21 09:30:13,802][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B3B20>
+[2023-04-21 09:30:13,802][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B3010> options
+[2023-04-21 09:30:13,802][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B3010>.
+[2023-04-21 09:30:13,802][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:13,802][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B3B20>
+[2023-04-21 09:30:13,802][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:13,802][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:13,826][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:13,826][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:13,826][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:13,826][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:13,826][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'2961', c_name=b'EPSG'
+[2023-04-21 09:30:13,826][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:13,834][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:13,834][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:13,834][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:13,850][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:13,850][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:13,850][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:13,850][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:13,866][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:13,866][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:13,866][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:13,866][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:13,866][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'2961', c_name=b'EPSG'
+[2023-04-21 09:30:13,866][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:13,866][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:13,866][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:13,866][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:13,882][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:13,890][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:13,898][rasterio.crs][DEBUG] - Matched. confidence=100, c_code=b'2961', c_name=b'EPSG'
+[2023-04-21 09:30:14,178][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B3580>
+[2023-04-21 09:30:14,178][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:14,178][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:14,178][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B3B80> created
+[2023-04-21 09:30:14,178][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:14,186][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:14,186][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B3B80>.
+[2023-04-21 09:30:14,186][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B3580>
+[2023-04-21 09:30:14,186][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:14,218][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:14,218][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NS_MargareeRiver.tif' mode='r'> is started.
+[2023-04-21 09:30:14,226][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B3580>
+[2023-04-21 09:30:14,226][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B3B80> options
+[2023-04-21 09:30:14,226][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B3B80>.
+[2023-04-21 09:30:14,226][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:14,226][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B3580>
+[2023-04-21 09:30:14,226][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NS_MargareeRiver.tif' mode='r'>
+Size: 233155350
+Extended check: False
+[2023-04-21 09:30:14,390][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B3580>
+[2023-04-21 09:30:14,390][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:14,390][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:14,390][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B3280> created
+[2023-04-21 09:30:14,397][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:14,397][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:14,397][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B3280>.
+[2023-04-21 09:30:14,397][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B3580>
+[2023-04-21 09:30:14,397][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:14,407][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:14,407][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NS_MargareeRiver.tif' mode='r'> is started.
+[2023-04-21 09:30:14,407][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B3580>
+[2023-04-21 09:30:14,407][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B3280> options
+[2023-04-21 09:30:14,407][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B3280>.
+[2023-04-21 09:30:14,407][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:14,407][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B3580>
+[2023-04-21 09:30:14,415][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B37C0>
+[2023-04-21 09:30:14,415][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:14,417][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:14,417][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B3280> created
+[2023-04-21 09:30:14,417][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:14,417][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:14,417][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B3280>.
+[2023-04-21 09:30:14,417][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B37C0>
+[2023-04-21 09:30:14,425][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:14,425][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:14,425][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NS_MargareeRiver.tif' mode='r'> is started.
+[2023-04-21 09:30:14,425][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B37C0>
+[2023-04-21 09:30:14,433][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B3280> options
+[2023-04-21 09:30:14,433][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B3280>.
+[2023-04-21 09:30:14,433][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:14,433][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B37C0>
+[2023-04-21 09:30:14,433][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NS_MargareeRiver.tif' mode='r'>
+Size: 233155350
+Extended check: False
+[2023-04-21 09:30:14,433][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B02E0>
+[2023-04-21 09:30:14,433][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:14,442][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:14,442][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B0820> created
+[2023-04-21 09:30:14,444][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:14,444][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:14,444][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B0820>.
+[2023-04-21 09:30:14,444][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B02E0>
+[2023-04-21 09:30:14,444][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:14,457][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:14,457][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/NS_MargareeRiver.tif' mode='r'> is started.
+[2023-04-21 09:30:14,457][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B02E0>
+[2023-04-21 09:30:14,457][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B0820> options
+[2023-04-21 09:30:14,457][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B0820>.
+[2023-04-21 09:30:14,457][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:14,457][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B02E0>
+[2023-04-21 09:30:14,467][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:14,467][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:14,518][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:14,518][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:14,518][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:14,518][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:14,526][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'2961', c_name=b'EPSG'
+[2023-04-21 09:30:14,526][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:14,528][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:14,528][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:14,528][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:15,190][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:15,190][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:15,198][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:15,198][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:15,206][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:15,206][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:15,206][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:15,206][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:15,206][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'2961', c_name=b'EPSG'
+[2023-04-21 09:30:15,206][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:15,206][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:15,206][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:15,206][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:15,862][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:15,862][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:17,608][rasterio.crs][DEBUG] - Matched. confidence=100, c_code=b'2961', c_name=b'EPSG'
+[2023-04-21 09:30:17,720][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x0000025544604D60>
+[2023-04-21 09:30:17,720][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:17,720][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:17,728][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x0000025544604790> created
+[2023-04-21 09:30:17,728][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:17,728][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:17,728][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x0000025544604790>.
+[2023-04-21 09:30:17,728][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x0000025544604D60>
+[2023-04-21 09:30:17,736][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:17,762][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:17,770][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/ON_Mississauga.tif' mode='r'> is started.
+[2023-04-21 09:30:17,770][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x0000025544604D60>
+[2023-04-21 09:30:17,770][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x0000025544604790> options
+[2023-04-21 09:30:17,770][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x0000025544604790>.
+[2023-04-21 09:30:17,770][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:17,770][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x0000025544604D60>
+[2023-04-21 09:30:17,770][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/ON_Mississauga.tif' mode='r'>
+Size: 88895010
+Extended check: False
+[2023-04-21 09:30:17,831][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x0000025544604D60>
+[2023-04-21 09:30:17,831][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:17,831][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:17,839][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x0000025544604670> created
+[2023-04-21 09:30:17,842][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:17,842][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:17,842][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x0000025544604670>.
+[2023-04-21 09:30:17,842][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x0000025544604D60>
+[2023-04-21 09:30:17,842][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:17,850][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:17,850][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/ON_Mississauga.tif' mode='r'> is started.
+[2023-04-21 09:30:17,850][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x0000025544604D60>
+[2023-04-21 09:30:17,857][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x0000025544604670> options
+[2023-04-21 09:30:17,857][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x0000025544604670>.
+[2023-04-21 09:30:17,857][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:17,857][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x0000025544604D60>
+[2023-04-21 09:30:17,857][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x0000025544604CA0>
+[2023-04-21 09:30:17,857][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:17,857][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:17,857][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x0000025544604670> created
+[2023-04-21 09:30:17,865][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:17,865][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:17,865][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x0000025544604670>.
+[2023-04-21 09:30:17,865][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x0000025544604CA0>
+[2023-04-21 09:30:17,865][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:17,873][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:17,873][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/ON_Mississauga.tif' mode='r'> is started.
+[2023-04-21 09:30:17,881][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x0000025544604CA0>
+[2023-04-21 09:30:17,881][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x0000025544604670> options
+[2023-04-21 09:30:17,883][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x0000025544604670>.
+[2023-04-21 09:30:17,883][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:17,883][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x0000025544604CA0>
+[2023-04-21 09:30:17,883][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/ON_Mississauga.tif' mode='r'>
+Size: 88895010
+Extended check: False
+[2023-04-21 09:30:17,883][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x0000025544604BE0>
+[2023-04-21 09:30:17,883][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:17,883][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:17,883][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x0000025544604D00> created
+[2023-04-21 09:30:17,893][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:17,893][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:17,893][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x0000025544604D00>.
+[2023-04-21 09:30:17,893][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x0000025544604BE0>
+[2023-04-21 09:30:17,893][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:17,903][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:17,903][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/ON_Mississauga.tif' mode='r'> is started.
+[2023-04-21 09:30:17,903][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x0000025544604BE0>
+[2023-04-21 09:30:17,903][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x0000025544604D00> options
+[2023-04-21 09:30:17,903][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x0000025544604D00>.
+[2023-04-21 09:30:17,903][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:17,903][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x0000025544604BE0>
+[2023-04-21 09:30:17,911][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:17,911][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:17,950][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:17,950][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:17,950][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:17,950][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:17,950][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'2958', c_name=b'EPSG'
+[2023-04-21 09:30:17,958][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:17,958][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:17,958][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:17,961][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:18,042][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:18,042][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:18,045][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:18,045][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:18,053][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:18,053][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:18,053][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:18,061][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:18,061][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'2958', c_name=b'EPSG'
+[2023-04-21 09:30:18,061][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:18,061][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:18,061][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:18,061][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:18,133][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:18,133][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:18,157][rasterio.crs][DEBUG] - Matched. confidence=100, c_code=b'2958', c_name=b'EPSG'
+[2023-04-21 09:30:18,237][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B36A0>
+[2023-04-21 09:30:18,237][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:18,237][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:18,237][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B0CD0> created
+[2023-04-21 09:30:18,237][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:18,237][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:18,237][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B0CD0>.
+[2023-04-21 09:30:18,237][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B36A0>
+[2023-04-21 09:30:18,237][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:18,261][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:18,261][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Ottawa_Gatineau_CardinalBillberryBeckettsOttawa.tif' mode='r'> is started.
+[2023-04-21 09:30:18,261][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B36A0>
+[2023-04-21 09:30:18,261][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B0CD0> options
+[2023-04-21 09:30:18,261][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B0CD0>.
+[2023-04-21 09:30:18,261][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:18,261][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B36A0>
+[2023-04-21 09:30:18,261][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Ottawa_Gatineau_CardinalBillberryBeckettsOttawa.tif' mode='r'>
+Size: 63553030
+Extended check: False
+[2023-04-21 09:30:18,301][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B36A0>
+[2023-04-21 09:30:18,301][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:18,301][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:18,301][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B3880> created
+[2023-04-21 09:30:18,301][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:18,301][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:18,301][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B3880>.
+[2023-04-21 09:30:18,301][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B36A0>
+[2023-04-21 09:30:18,301][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:18,309][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:18,309][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Ottawa_Gatineau_CardinalBillberryBeckettsOttawa.tif' mode='r'> is started.
+[2023-04-21 09:30:18,309][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B36A0>
+[2023-04-21 09:30:18,309][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B3880> options
+[2023-04-21 09:30:18,317][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B3880>.
+[2023-04-21 09:30:18,317][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:18,317][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B36A0>
+[2023-04-21 09:30:18,317][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B2FB0>
+[2023-04-21 09:30:18,317][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:18,317][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:18,317][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B3880> created
+[2023-04-21 09:30:18,325][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:18,325][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:18,325][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B3880>.
+[2023-04-21 09:30:18,325][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B2FB0>
+[2023-04-21 09:30:18,325][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:18,333][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:18,333][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Ottawa_Gatineau_CardinalBillberryBeckettsOttawa.tif' mode='r'> is started.
+[2023-04-21 09:30:18,333][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B2FB0>
+[2023-04-21 09:30:18,341][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B3880> options
+[2023-04-21 09:30:18,341][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B3880>.
+[2023-04-21 09:30:18,341][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:18,341][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B2FB0>
+[2023-04-21 09:30:18,341][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Ottawa_Gatineau_CardinalBillberryBeckettsOttawa.tif' mode='r'>
+Size: 63553030
+Extended check: False
+[2023-04-21 09:30:18,341][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B35B0>
+[2023-04-21 09:30:18,349][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:18,349][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:18,349][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B36D0> created
+[2023-04-21 09:30:18,349][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:18,349][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:18,349][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B36D0>.
+[2023-04-21 09:30:18,357][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B35B0>
+[2023-04-21 09:30:18,357][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:18,357][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:18,365][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Ottawa_Gatineau_CardinalBillberryBeckettsOttawa.tif' mode='r'> is started.
+[2023-04-21 09:30:18,365][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B35B0>
+[2023-04-21 09:30:18,365][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B36D0> options
+[2023-04-21 09:30:18,365][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B36D0>.
+[2023-04-21 09:30:18,365][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:18,365][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B35B0>
+[2023-04-21 09:30:18,373][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:18,373][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:18,413][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:18,413][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:18,413][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:18,413][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:18,413][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'2959', c_name=b'EPSG'
+[2023-04-21 09:30:18,413][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:18,413][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:18,413][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:18,413][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:18,471][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:18,471][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:18,479][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:18,479][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:18,487][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:18,487][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:18,487][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:18,487][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:18,487][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'2959', c_name=b'EPSG'
+[2023-04-21 09:30:18,487][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:18,487][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:18,487][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:18,487][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:18,543][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:18,543][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:18,559][rasterio.crs][DEBUG] - Matched. confidence=100, c_code=b'2959', c_name=b'EPSG'
+[2023-04-21 09:30:18,655][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B3B50>
+[2023-04-21 09:30:18,655][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:18,655][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:18,655][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B0CD0> created
+[2023-04-21 09:30:18,655][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:18,655][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:18,655][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B0CD0>.
+[2023-04-21 09:30:18,655][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B3B50>
+[2023-04-21 09:30:18,655][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:18,679][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:18,679][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Ottawa_Gatineau_FlowingNicholsHobbsKing.tif' mode='r'> is started.
+[2023-04-21 09:30:18,679][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B3B50>
+[2023-04-21 09:30:18,679][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B0CD0> options
+[2023-04-21 09:30:18,679][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B0CD0>.
+[2023-04-21 09:30:18,679][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:18,679][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B3B50>
+[2023-04-21 09:30:18,679][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Ottawa_Gatineau_FlowingNicholsHobbsKing.tif' mode='r'>
+Size: 78083750
+Extended check: False
+[2023-04-21 09:30:18,727][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B3B50>
+[2023-04-21 09:30:18,735][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:18,735][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:18,735][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B3190> created
+[2023-04-21 09:30:18,735][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:18,735][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:18,735][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B3190>.
+[2023-04-21 09:30:18,735][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B3B50>
+[2023-04-21 09:30:18,735][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:18,743][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:18,743][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Ottawa_Gatineau_FlowingNicholsHobbsKing.tif' mode='r'> is started.
+[2023-04-21 09:30:18,743][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B3B50>
+[2023-04-21 09:30:18,743][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B3190> options
+[2023-04-21 09:30:18,743][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B3190>.
+[2023-04-21 09:30:18,743][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:18,743][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B3B50>
+[2023-04-21 09:30:18,743][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B36D0>
+[2023-04-21 09:30:18,743][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:18,743][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:18,743][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B3190> created
+[2023-04-21 09:30:18,743][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:18,743][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:18,743][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B3190>.
+[2023-04-21 09:30:18,743][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B36D0>
+[2023-04-21 09:30:18,751][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:18,751][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:18,751][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Ottawa_Gatineau_FlowingNicholsHobbsKing.tif' mode='r'> is started.
+[2023-04-21 09:30:18,751][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B36D0>
+[2023-04-21 09:30:18,751][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B3190> options
+[2023-04-21 09:30:18,751][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B3190>.
+[2023-04-21 09:30:18,751][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:18,751][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B36D0>
+[2023-04-21 09:30:18,751][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Ottawa_Gatineau_FlowingNicholsHobbsKing.tif' mode='r'>
+Size: 78083750
+Extended check: False
+[2023-04-21 09:30:18,759][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B3010>
+[2023-04-21 09:30:18,759][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:18,759][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:18,759][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B3A60> created
+[2023-04-21 09:30:18,759][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:18,759][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:18,759][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B3A60>.
+[2023-04-21 09:30:18,759][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B3010>
+[2023-04-21 09:30:18,759][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:18,767][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:18,767][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Ottawa_Gatineau_FlowingNicholsHobbsKing.tif' mode='r'> is started.
+[2023-04-21 09:30:18,767][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B3010>
+[2023-04-21 09:30:18,767][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B3A60> options
+[2023-04-21 09:30:18,767][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B3A60>.
+[2023-04-21 09:30:18,767][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:18,767][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B3010>
+[2023-04-21 09:30:18,767][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:18,767][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:18,783][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:18,791][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:18,791][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:18,791][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:18,791][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'2959', c_name=b'EPSG'
+[2023-04-21 09:30:18,791][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:18,791][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:18,791][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:18,791][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:19,175][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:19,183][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:19,183][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:19,183][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:19,191][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:19,191][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:19,191][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:19,191][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:19,199][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'2959', c_name=b'EPSG'
+[2023-04-21 09:30:19,199][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:19,199][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:19,199][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:19,199][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:19,503][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:19,503][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:19,607][rasterio.crs][DEBUG] - Matched. confidence=100, c_code=b'2959', c_name=b'EPSG'
+[2023-04-21 09:30:19,927][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B35E0>
+[2023-04-21 09:30:19,927][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:19,927][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:19,927][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B36A0> created
+[2023-04-21 09:30:19,935][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:19,935][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:19,935][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B36A0>.
+[2023-04-21 09:30:19,935][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B35E0>
+[2023-04-21 09:30:19,935][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:19,975][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:19,975][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Ottawa_Gatineau_RideauMudBuckels.tif' mode='r'> is started.
+[2023-04-21 09:30:19,975][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B35E0>
+[2023-04-21 09:30:19,975][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B36A0> options
+[2023-04-21 09:30:19,975][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B36A0>.
+[2023-04-21 09:30:19,975][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:19,983][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B35E0>
+[2023-04-21 09:30:19,983][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Ottawa_Gatineau_RideauMudBuckels.tif' mode='r'>
+Size: 261648630
+Extended check: False
+[2023-04-21 09:30:20,151][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B35E0>
+[2023-04-21 09:30:20,159][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:20,159][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:20,159][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B2FE0> created
+[2023-04-21 09:30:20,159][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:20,159][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:20,159][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B2FE0>.
+[2023-04-21 09:30:20,159][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B35E0>
+[2023-04-21 09:30:20,167][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:20,167][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:20,175][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Ottawa_Gatineau_RideauMudBuckels.tif' mode='r'> is started.
+[2023-04-21 09:30:20,175][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B35E0>
+[2023-04-21 09:30:20,175][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B2FE0> options
+[2023-04-21 09:30:20,175][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B2FE0>.
+[2023-04-21 09:30:20,175][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:20,175][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B35E0>
+[2023-04-21 09:30:20,175][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B36D0>
+[2023-04-21 09:30:20,175][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:20,175][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:20,175][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B2FE0> created
+[2023-04-21 09:30:20,183][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:20,183][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:20,183][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B2FE0>.
+[2023-04-21 09:30:20,183][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B36D0>
+[2023-04-21 09:30:20,183][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:20,191][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:20,191][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Ottawa_Gatineau_RideauMudBuckels.tif' mode='r'> is started.
+[2023-04-21 09:30:20,191][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B36D0>
+[2023-04-21 09:30:20,191][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B2FE0> options
+[2023-04-21 09:30:20,191][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B2FE0>.
+[2023-04-21 09:30:20,191][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:20,199][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B36D0>
+[2023-04-21 09:30:20,199][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Ottawa_Gatineau_RideauMudBuckels.tif' mode='r'>
+Size: 261648630
+Extended check: False
+[2023-04-21 09:30:20,199][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x00000255431B36D0>
+[2023-04-21 09:30:20,199][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:20,199][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:20,199][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x00000255431B3220> created
+[2023-04-21 09:30:20,207][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:20,207][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:20,207][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x00000255431B3220>.
+[2023-04-21 09:30:20,207][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x00000255431B36D0>
+[2023-04-21 09:30:20,207][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:20,215][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:20,215][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Ottawa_Gatineau_RideauMudBuckels.tif' mode='r'> is started.
+[2023-04-21 09:30:20,215][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x00000255431B36D0>
+[2023-04-21 09:30:20,215][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x00000255431B3220> options
+[2023-04-21 09:30:20,215][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x00000255431B3220>.
+[2023-04-21 09:30:20,215][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:20,223][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x00000255431B36D0>
+[2023-04-21 09:30:20,223][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:20,223][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:20,255][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:20,255][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:20,255][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:20,255][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:20,255][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'2959', c_name=b'EPSG'
+[2023-04-21 09:30:20,255][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:20,263][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:20,263][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:20,263][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:20,557][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:20,557][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:20,563][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:20,563][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:20,571][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:20,571][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:20,571][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:20,571][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:20,571][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'2959', c_name=b'EPSG'
+[2023-04-21 09:30:20,571][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:20,571][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:20,579][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:20,579][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:20,739][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:20,739][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:20,803][rasterio.crs][DEBUG] - Matched. confidence=100, c_code=b'2959', c_name=b'EPSG'
+[2023-04-21 09:30:20,835][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x0000025544605990>
+[2023-04-21 09:30:20,835][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:20,835][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:20,843][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x0000025544605270> created
+[2023-04-21 09:30:20,843][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:20,843][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:20,843][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x0000025544605270>.
+[2023-04-21 09:30:20,843][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x0000025544605990>
+[2023-04-21 09:30:20,843][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:20,859][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:20,859][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Ottawa_Gatineau_VilleGatineau.tif' mode='r'> is started.
+[2023-04-21 09:30:20,867][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x0000025544605990>
+[2023-04-21 09:30:20,867][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x0000025544605270> options
+[2023-04-21 09:30:20,867][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x0000025544605270>.
+[2023-04-21 09:30:20,867][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:20,867][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x0000025544605990>
+[2023-04-21 09:30:20,867][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Ottawa_Gatineau_VilleGatineau.tif' mode='r'>
+Size: 12398070
+Extended check: False
+[2023-04-21 09:30:20,875][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x0000025544605990>
+[2023-04-21 09:30:20,875][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:20,875][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:20,875][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x0000025544604C40> created
+[2023-04-21 09:30:20,883][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:20,883][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:20,883][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x0000025544604C40>.
+[2023-04-21 09:30:20,883][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x0000025544605990>
+[2023-04-21 09:30:20,883][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:20,891][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:20,891][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Ottawa_Gatineau_VilleGatineau.tif' mode='r'> is started.
+[2023-04-21 09:30:20,891][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x0000025544605990>
+[2023-04-21 09:30:20,891][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x0000025544604C40> options
+[2023-04-21 09:30:20,899][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x0000025544604C40>.
+[2023-04-21 09:30:20,899][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:20,899][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x0000025544605990>
+[2023-04-21 09:30:20,899][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x0000025544606050>
+[2023-04-21 09:30:20,899][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:20,899][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:20,899][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x0000025544604C40> created
+[2023-04-21 09:30:20,899][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:20,899][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:20,899][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x0000025544604C40>.
+[2023-04-21 09:30:20,899][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x0000025544606050>
+[2023-04-21 09:30:20,907][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:20,907][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:20,907][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Ottawa_Gatineau_VilleGatineau.tif' mode='r'> is started.
+[2023-04-21 09:30:20,907][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x0000025544606050>
+[2023-04-21 09:30:20,907][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x0000025544604C40> options
+[2023-04-21 09:30:20,907][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x0000025544604C40>.
+[2023-04-21 09:30:20,915][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:20,915][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x0000025544606050>
+[2023-04-21 09:30:20,915][root][DEBUG] - Raster to validate: <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Ottawa_Gatineau_VilleGatineau.tif' mode='r'>
+Size: 12398070
+Extended check: False
+[2023-04-21 09:30:20,915][rasterio.env][DEBUG] - Entering env context: <rasterio.env.Env object at 0x0000025544604CD0>
+[2023-04-21 09:30:20,915][rasterio.env][DEBUG] - Starting outermost env
+[2023-04-21 09:30:20,915][rasterio.env][DEBUG] - No GDAL environment exists
+[2023-04-21 09:30:20,923][rasterio.env][DEBUG] - New GDAL environment <rasterio._env.GDALEnv object at 0x0000025544607A30> created
+[2023-04-21 09:30:20,923][rasterio._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:20,923][rasterio._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:20,923][rasterio._env][DEBUG] - Started GDALEnv: self=<rasterio._env.GDALEnv object at 0x0000025544607A30>.
+[2023-04-21 09:30:20,923][rasterio.env][DEBUG] - Entered env context: <rasterio.env.Env object at 0x0000025544604CD0>
+[2023-04-21 09:30:20,931][rasterio._base][DEBUG] - Sharing flag: 0
+[2023-04-21 09:30:20,931][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:20,931][rasterio._base][DEBUG] - Dataset <open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/Ottawa_Gatineau_VilleGatineau.tif' mode='r'> is started.
+[2023-04-21 09:30:20,939][rasterio.env][DEBUG] - Exiting env context: <rasterio.env.Env object at 0x0000025544604CD0>
+[2023-04-21 09:30:20,939][rasterio.env][DEBUG] - Cleared existing <rasterio._env.GDALEnv object at 0x0000025544607A30> options
+[2023-04-21 09:30:20,939][rasterio._env][DEBUG] - Stopped GDALEnv <rasterio._env.GDALEnv object at 0x0000025544607A30>.
+[2023-04-21 09:30:20,939][rasterio.env][DEBUG] - Exiting outermost env
+[2023-04-21 09:30:20,939][rasterio.env][DEBUG] - Exited env context: <rasterio.env.Env object at 0x0000025544604CD0>
+[2023-04-21 09:30:20,939][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:20,947][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:20,979][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:20,979][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:20,979][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:20,979][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:20,979][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'2959', c_name=b'EPSG'
+[2023-04-21 09:30:20,979][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:20,979][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:20,979][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:20,979][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:21,107][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:21,107][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:21,115][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:21,115][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:21,123][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:30:21,123][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:30:21,123][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:21,123][fiona.ogrext][DEBUG] - Got coordinate system
+[2023-04-21 09:30:21,123][fiona.crs][DEBUG] - Matched. confidence=100, c_code=b'2959', c_name=b'EPSG'
+[2023-04-21 09:30:21,123][fiona.ogrext][DEBUG] - OLC_FASTSETNEXTBYINDEX: 0
+[2023-04-21 09:30:21,123][fiona.ogrext][DEBUG] - OLC_FASTFEATURECOUNT: 1
+[2023-04-21 09:30:21,123][fiona.ogrext][DEBUG] - Next index: 0
+[2023-04-21 09:30:21,123][fiona.ogrext][DEBUG] - Next index: 1
+[2023-04-21 09:30:21,155][fiona.collection][DEBUG] - Flushed buffer
+[2023-04-21 09:30:21,155][fiona.collection][DEBUG] - Stopped session
+[2023-04-21 09:30:21,179][rasterio.crs][DEBUG] - Matched. confidence=100, c_code=b'2959', c_name=b'EPSG'
+[2023-04-21 09:30:21,187][tiling_segmentation][INFO] - Patches will be written to C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\Class1RawData.csv\template_project
+
+
+[2023-04-21 09:30:21,187][tiling_segmentation][INFO] - Preparing patches 
+	Samples_size: 384 
+[2023-04-21 09:30:21,187][rasterio._warp][DEBUG] - Exported CRS to WKT.
+[2023-04-21 09:30:21,187][rasterio._warp][DEBUG] - Warp_extras: {'init_dest': 'NO_DATA'}
+[2023-04-21 09:30:21,211][rasterio._base][DEBUG] - Nodata success: 1, Nodata value: -9999.000000
+[2023-04-21 09:30:21,211][rasterio._base][DEBUG] - Dataset <closed WarpedVRT name='WarpedVRT(C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/CA_Lethbridge.tif)' mode='r'> is started.
+[2023-04-21 09:30:21,211][rasterio._io][DEBUG] - Output nodata value read from file: -9999.0
+[2023-04-21 09:30:21,211][rasterio._io][DEBUG] - Output nodata values: [-9999.0]
+[2023-04-21 09:30:21,219][rasterio._io][DEBUG] - all_valid: False
+[2023-04-21 09:30:21,219][rasterio._io][DEBUG] - mask_flags: ([<MaskFlags.nodata: 8>],)
+[2023-04-21 09:30:21,219][rasterio._io][DEBUG] - Jump straight to _read()
+[2023-04-21 09:30:21,219][rasterio._io][DEBUG] - Window: None
+[2023-04-21 09:30:21,219][rasterio._io][DEBUG] - IO window xoff=0.0 yoff=0.0 width=2829.0 height=2975.0
+[2023-04-21 09:30:21,459][rasterio.crs][DEBUG] - Matched. confidence=100, c_code=b'31966', c_name=b'EPSG'

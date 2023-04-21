@@ -1,0 +1,138 @@
+[2023-04-06 19:43:41,007][root][INFO] - 
+Overwritten parameters in the config: 
+mode=tiling
+[2023-04-06 19:43:41,007][root][INFO] - 
+---------------------------------------
+Let's start tiling for segmentation !!!
+---------------------------------------
+[2023-04-06 19:43:42,721][root][ERROR] - The key download_data as a None value.
+[2023-04-06 19:43:42,721][root][ERROR] - The key multiprocessing as a None value.
+[2023-04-06 19:43:42,734][root][ERROR] - The key write_dest_raster as a None value.
+[2023-04-06 19:43:42,734][root][ERROR] - The key clahe_clip_limit as a None value.
+[2023-04-06 19:43:42,867][dataset.aoi][INFO] - 
+	Successfully read csv file: rawImg.csv
+	Number of rows: 1
+	Copying first row:
+{'tif': 'C:\\Users\\abfernan\\CrossCanFloodMapping\\RawData\\TestTiling\\BC_kootenay_Creston.tif', 'gpkg': 'C:\\Users\\abfernan\\CrossCanFloodMapping\\RawData\\TestTiling\\BC_kootenay_Creston.gpkg', 'split': 'trn', 'aoi_id': 'test'}
+
+[2023-04-06 19:43:46,420][dataset.aoi][ERROR] - Features in label file C:\Users\abfernan\CrossCanFloodMapping\RawData\TestTiling\BC_kootenay_Creston.gpkg do not intersect with bounds of raster file <VRTDataset rasterXSize="2101" rasterYSize="1510">
+  <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["NAD83(CSRS) / UTM zone 11N",GEOGCS["NAD83(CSRS)",DATUM["NAD83_Canadian_Spatial_Reference_System",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6140"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4617"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",-117],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","2955"]]</SRS>
+  <GeoTransform>  5.3022000000000000e+05,  5.0000000000000000e+00,  0.0000000000000000e+00,  5.4407350000000000e+06,  0.0000000000000000e+00, -5.0000000000000000e+00</GeoTransform>
+  <Metadata>
+    <MDI key="AREA_OR_POINT">Area</MDI>
+  </Metadata>
+  <Metadata domain="IMAGE_STRUCTURE">
+    <MDI key="INTERLEAVE">PIXEL</MDI>
+  </Metadata>
+  <VRTRasterBand dataType="Byte" band="1" blockYSize="1">
+    <Metadata>
+      <MDI key="STATISTICS_APPROXIMATE">YES</MDI>
+      <MDI key="STATISTICS_MAXIMUM">255</MDI>
+      <MDI key="STATISTICS_MEAN">20.105045216564</MDI>
+      <MDI key="STATISTICS_MINIMUM">0</MDI>
+      <MDI key="STATISTICS_STDDEV">31.537928605924</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">100</MDI>
+    </Metadata>
+    <ColorInterp>Red</ColorInterp>
+    <SimpleSource>
+      <SourceFilename relativeToVRT="0">C:/Users/abfernan/CrossCanFloodMapping/RawData/TestTiling/BC_kootenay_Creston.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="2101" RasterYSize="1510" DataType="Byte" BlockXSize="2101" BlockYSize="1" />
+      <SrcRect xOff="0" yOff="0" xSize="2101" ySize="1510" />
+      <DstRect xOff="0" yOff="0" xSize="2101" ySize="1510" />
+    </SimpleSource>
+  </VRTRasterBand>
+  </VRTDataset>
+[2023-04-06 19:43:47,266][root][ERROR] - CRS mismatch: 
+TIF file "<open DatasetReader name='<VRTDataset rasterXSize="2101" rasterYSize="1510">
+  <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["NAD83(CSRS) / UTM zone 11N",GEOGCS["NAD83(CSRS)",DATUM["NAD83_Canadian_Spatial_Reference_System",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6140"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4617"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",-117],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","2955"]]</SRS>
+  <GeoTransform>  5.3022000000000000e+05,  5.0000000000000000e+00,  0.0000000000000000e+00,  5.4407350000000000e+06,  0.0000000000000000e+00, -5.0000000000000000e+00</GeoTransform>
+  <Metadata>
+    <MDI key="AREA_OR_POINT">Area</MDI>
+  </Metadata>
+  <Metadata domain="IMAGE_STRUCTURE">
+    <MDI key="INTERLEAVE">PIXEL</MDI>
+  </Metadata>
+  <VRTRasterBand dataType="Byte" band="1" blockYSize="1">
+    <Metadata>
+      <MDI key="STATISTICS_APPROXIMATE">YES</MDI>
+      <MDI key="STATISTICS_MAXIMUM">255</MDI>
+      <MDI key="STATISTICS_MEAN">20.105045216564</MDI>
+      <MDI key="STATISTICS_MINIMUM">0</MDI>
+      <MDI key="STATISTICS_STDDEV">31.537928605924</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">100</MDI>
+    </Metadata>
+    <ColorInterp>Red</ColorInterp>
+    <SimpleSource>
+      <SourceFilename relativeToVRT="0">C:/Users/abfernan/CrossCanFloodMapping/RawData/TestTiling/BC_kootenay_Creston.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="2101" RasterYSize="1510" DataType="Byte" BlockXSize="2101" BlockYSize="1" />
+      <SrcRect xOff="0" yOff="0" xSize="2101" ySize="1510" />
+      <DstRect xOff="0" yOff="0" xSize="2101" ySize="1510" />
+    </SimpleSource>
+  </VRTRasterBand>
+  </VRTDataset>' mode='r'>" has EPSG:2955 CRS; 
+GPKG file "     id             in_id flood_mech  ... See id_2                                           geometry
+0  83.0  BCCRST0098IN0194   riverine  ...   1    3  MULTIPOLYGON (((-116.55319 49.07406, -116.5531...
+
+[1 rows x 30 columns]" has EPSG:4617 CRS.
+[2023-04-06 19:43:47,276][dataset.aoi][WARNING] - 
+No features found for ground truth "C:\Users\abfernan\CrossCanFloodMapping\RawData\TestTiling\BC_kootenay_Creston.gpkg",
+filtered by attribute field "percentage"
+with values "[1]"
+[2023-04-06 19:43:47,279][tiling_segmentation][INFO] - Patches will be written to C:\Users\abfernan\CrossCanFloodMapping\RawData\TestTiling\template_project
+
+
+[2023-04-06 19:43:47,280][tiling_segmentation][INFO] - Preparing patches 
+	Samples_size: 384 
+[2023-04-06 19:43:47,280][tiling_segmentation][ERROR] - Features in label file C:\Users\abfernan\CrossCanFloodMapping\RawData\TestTiling\BC_kootenay_Creston.gpkg do not intersect with bounds of raster file <VRTDataset rasterXSize="2101" rasterYSize="1510">
+  <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["NAD83(CSRS) / UTM zone 11N",GEOGCS["NAD83(CSRS)",DATUM["NAD83_Canadian_Spatial_Reference_System",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6140"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4617"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",-117],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","2955"]]</SRS>
+  <GeoTransform>  5.3022000000000000e+05,  5.0000000000000000e+00,  0.0000000000000000e+00,  5.4407350000000000e+06,  0.0000000000000000e+00, -5.0000000000000000e+00</GeoTransform>
+  <Metadata>
+    <MDI key="AREA_OR_POINT">Area</MDI>
+  </Metadata>
+  <Metadata domain="IMAGE_STRUCTURE">
+    <MDI key="INTERLEAVE">PIXEL</MDI>
+  </Metadata>
+  <VRTRasterBand dataType="Byte" band="1" blockYSize="1">
+    <Metadata>
+      <MDI key="STATISTICS_APPROXIMATE">YES</MDI>
+      <MDI key="STATISTICS_MAXIMUM">255</MDI>
+      <MDI key="STATISTICS_MEAN">20.105045216564</MDI>
+      <MDI key="STATISTICS_MINIMUM">0</MDI>
+      <MDI key="STATISTICS_STDDEV">31.537928605924</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">100</MDI>
+    </Metadata>
+    <ColorInterp>Red</ColorInterp>
+    <SimpleSource>
+      <SourceFilename relativeToVRT="0">C:/Users/abfernan/CrossCanFloodMapping/RawData/TestTiling/BC_kootenay_Creston.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="2101" RasterYSize="1510" DataType="Byte" BlockXSize="2101" BlockYSize="1" />
+      <SrcRect xOff="0" yOff="0" xSize="2101" ySize="1510" />
+      <DstRect xOff="0" yOff="0" xSize="2101" ySize="1510" />
+    </SimpleSource>
+  </VRTRasterBand>
+  </VRTDataset>, thus this AOI will be skipped.
+[2023-04-06 19:43:47,283][tiling_segmentation][INFO] - Tiling done. Creating pixel masks from clipped geojsons...
+[2023-04-06 19:43:47,285][tiling_segmentation][INFO] - 
+Expected val ratio: 30 %
+Actual val ratio: 0.00 %
+[2023-04-06 19:43:47,285][tiling_segmentation][INFO] - 
+Dataset: trn
+	Filters:
+	 - Minimumum non-zero values (aka minimum annotated percentage): 10%
+	Kept: 0
+	Discarded: 0
+[2023-04-06 19:43:47,286][tiling_segmentation][INFO] - 
+Dataset: val
+	Total patches: 0
+[2023-04-06 19:43:47,286][tiling_segmentation][INFO] - 
+End of process. See tiled dataset lists:
+[2023-04-06 19:43:47,286][tiling_segmentation][INFO] - trn: C:\Users\abfernan\CrossCanFloodMapping\RawData\TestTiling\template_project\template_project_feat1_min-annot10_trn.csv
+[2023-04-06 19:43:47,287][tiling_segmentation][INFO] - val: C:\Users\abfernan\CrossCanFloodMapping\RawData\TestTiling\template_project\template_project_feat1_min-annot10_val.csv
+[2023-04-06 19:43:47,425][root][INFO] - 
+-----------------
+End of tiling !!!
+Elapsed time: 6.42s
+-----------------
+

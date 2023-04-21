@@ -1,0 +1,22 @@
+[2023-04-21 09:28:51,847][root][INFO] - 
+Overwritten parameters in the config: 
+mode=tiling
+[2023-04-21 09:28:51,847][root][INFO] - 
+---------------------------------------
+Let's start tiling for segmentation !!!
+---------------------------------------
+[2023-04-21 09:28:52,055][matplotlib][DEBUG] - matplotlib data path: C:\Users\abfernan\.conda\envs\geo_deep_env\lib\site-packages\matplotlib\mpl-data
+[2023-04-21 09:28:52,055][matplotlib][DEBUG] - CONFIGDIR=C:\Users\abfernan\.matplotlib
+[2023-04-21 09:28:52,063][matplotlib][DEBUG] - interactive is False
+[2023-04-21 09:28:52,063][matplotlib][DEBUG] - platform is win32
+[2023-04-21 09:28:52,111][matplotlib][DEBUG] - CACHEDIR=C:\Users\abfernan\.matplotlib
+[2023-04-21 09:28:52,119][matplotlib.font_manager][DEBUG] - Using fontManager instance from C:\Users\abfernan\.matplotlib\fontlist-v330.json
+[2023-04-21 09:28:52,567][fiona.session][DEBUG] - Could not import boto3, continuing with reduced functionality.
+[2023-04-21 09:28:52,575][fiona._env][DEBUG] - GDAL_DATA found in environment.
+[2023-04-21 09:28:52,575][fiona._env][DEBUG] - PROJ_DATA found in environment.
+[2023-04-21 09:28:54,223][root][ERROR] - The key download_data as a None value.
+[2023-04-21 09:28:54,223][root][ERROR] - The key multiprocessing as a None value.
+[2023-04-21 09:28:54,223][root][ERROR] - The key write_dest_raster as a None value.
+[2023-04-21 09:28:54,231][root][ERROR] - The key clahe_clip_limit as a None value.
+[2023-04-21 09:28:54,511][tiling_segmentation][WARNING] - Data path exists: C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\Class1RawData.csv\template_project. Make sure patches belong to the same experiment.
+[2023-04-21 09:28:54,511][tiling_segmentation][WARNING] - Debug mode activated. Some debug features may mobilize extra disk space and cause delays in execution.
