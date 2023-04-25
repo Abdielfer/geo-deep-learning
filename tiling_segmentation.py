@@ -127,11 +127,9 @@ class Tiler(object):
             self.patch_stride = patch_stride
         else:
             self.patch_stride = self.dest_patch_size
-        
         if not isinstance(patch_stride, int):
-            raise TypeError(f'Tile stride should be an integer. Got {patch_stride} of type {type(patch_stride)}')
+            raise TypeError(f'Tile stride should be an integer. Got {self.patch_stride} of type {type(self.patch_stride)}')
    
-
         if not isinstance(min_annot_perc, Number) and 0 <= min_annot_perc <= 100:
             raise TypeError(f'Minimum annotated percent should be a number between 0 and 100.\n'
                             f'Got {min_annot_perc} of type {type(min_annot_perc)}')
