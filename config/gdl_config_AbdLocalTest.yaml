@@ -27,7 +27,7 @@ general:
   config_name: ${hydra:job.config_name}
   config_override_dirname: ${hydra:job.override_dirname}
   config_path: ${hydra:runtime.config_sources}
-  project_name: template_project
+  project_name: Percentage_1
   workspace: AbdielLocaTest
   max_epochs: 20 # for train only
   min_epochs: 1 # for train only
