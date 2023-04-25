@@ -1,0 +1,36 @@
+[2023-04-25 11:18:33,336][root][INFO] - 
+Overwritten parameters in the config: 
+mode=tiling
+[2023-04-25 11:18:33,337][root][INFO] - 
+---------------------------------------
+Let's start tiling for segmentation !!!
+---------------------------------------
+[2023-04-25 11:18:36,217][root][ERROR] - The key download_data as a None value.
+[2023-04-25 11:18:36,219][root][ERROR] - The key multiprocessing as a None value.
+[2023-04-25 11:18:36,220][root][ERROR] - The key write_dest_raster as a None value.
+[2023-04-25 11:18:36,221][root][ERROR] - The key clahe_clip_limit as a None value.
+[2023-04-25 11:18:36,471][dataset.aoi][INFO] - 
+	Successfully read csv file: Class1RawData.csv
+	Number of rows: 14
+	Copying first row:
+{'tif': 'C:\\Users\\abfernan\\CrossCanFloodMapping\\DatasetCNNFlood\\RawData\\Class1\\QC_Gaspe1Et2.tif', 'gpkg': 'C:\\Users\\abfernan\\CrossCanFloodMapping\\DatasetCNNFlood\\RawData\\Class1\\QC_Gaspe1Et2_C1.gpkg', 'split': 'trn'}
+
+[2023-04-25 11:18:41,131][root][WARNING] - Cannot parse epsg code from raster's crs 'C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/SK_Moose_Jaw.tif'
+[2023-04-25 11:18:44,474][root][WARNING] - Cannot parse epsg code from raster's crs 'C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/SK_Regina.tif'
+[2023-04-25 11:18:45,052][root][WARNING] - Cannot parse epsg code from raster's crs 'C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/SK_Tisdale.tif'
+[2023-04-25 11:18:45,600][root][WARNING] - Cannot parse epsg code from raster's crs 'C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/SK_Watson.tif'
+[2023-04-25 11:18:51,004][root][ERROR] - CRS mismatch: 
+TIF file "<open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/SK_Weyburn.tif' mode='r'>" has EPSG:2957 CRS; 
+GPKG file "      id             in_id flood_mech  ... See id_2                                           geometry
+0  493.0  SKWEYB0033IN0076   riverine  ...   1    3  MULTIPOLYGON (((581206.423 5500025.097, 581206...
+
+[1 rows x 30 columns]" has EPSG:6342 CRS.
+[2023-04-25 11:18:52,253][root][WARNING] - Cannot parse epsg code from raster's crs 'C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/SK_Yorkton.tif'
+[2023-04-25 11:18:52,262][tiling_segmentation][INFO] - Patches will be written to C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\C1Dataset\Percentage_1
+
+
+[2023-04-25 11:18:52,263][tiling_segmentation][INFO] - Preparing patches 
+	Samples_size: 384 
+[2023-04-25 11:19:03,170][tiling_segmentation][INFO] - Cropping raster patches...
+[2023-04-25 11:19:04,432][tiling_segmentation][INFO] - Cropping raster patches...
+[2023-04-25 11:20:00,837][tiling_segmentation][INFO] - Cropping raster patches...

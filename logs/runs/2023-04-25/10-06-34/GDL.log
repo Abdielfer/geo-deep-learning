@@ -1,0 +1,28 @@
+[2023-04-25 10:06:35,021][root][INFO] - 
+Overwritten parameters in the config: 
+mode=tiling
+[2023-04-25 10:06:35,022][root][INFO] - 
+---------------------------------------
+Let's start tiling for segmentation !!!
+---------------------------------------
+[2023-04-25 10:06:43,965][root][ERROR] - The key download_data as a None value.
+[2023-04-25 10:06:43,966][root][ERROR] - The key multiprocessing as a None value.
+[2023-04-25 10:06:43,966][root][ERROR] - The key write_dest_raster as a None value.
+[2023-04-25 10:06:43,967][root][ERROR] - The key clahe_clip_limit as a None value.
+[2023-04-25 10:06:44,328][dataset.aoi][INFO] - 
+	Successfully read csv file: Class1RawData.csv
+	Number of rows: 1
+	Copying first row:
+{'tif': 'C:\\Users\\abfernan\\CrossCanFloodMapping\\DatasetCNNFlood\\RawData\\Class1\\SK_Wadena.tif', 'gpkg': 'C:\\Users\\abfernan\\CrossCanFloodMapping\\DatasetCNNFlood\\RawData\\Class1\\SK_Wadena_C1.gpkg', 'split': 'trn'}
+
+[2023-04-25 10:06:44,923][root][ERROR] - CRS mismatch: 
+TIF file "<open DatasetReader name='C:/Users/abfernan/CrossCanFloodMapping/DatasetCNNFlood/RawData/Class1/SK_Wadena.tif' mode='r'>" has EPSG:2957 CRS; 
+GPKG file "      id             in_id flood_mech  ... See id_2                                           geometry
+0  488.0  SKWADE0032IN0085   riverine  ...   1    3  MULTIPOLYGON (((582171.278 5755708.049, 582171...
+
+[1 rows x 30 columns]" has EPSG:6342 CRS.
+[2023-04-25 10:06:44,931][tiling_segmentation][INFO] - Patches will be written to C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\C1Dataset\Percentage_1
+
+
+[2023-04-25 10:06:44,932][tiling_segmentation][INFO] - Preparing patches 
+	Samples_size: 384 
