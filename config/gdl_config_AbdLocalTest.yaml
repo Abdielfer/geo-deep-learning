@@ -1,7 +1,7 @@
 defaults:
   - model: gdl_unet
   - verify: default_verify
-  - tiling: default_tiling_flood
+  - tiling: default_tiling_floodVelum
   - training: default_training
   - loss: binary/softbce
   - optimizer: adamw

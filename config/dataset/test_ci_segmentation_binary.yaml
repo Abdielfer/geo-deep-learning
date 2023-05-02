@@ -2,8 +2,8 @@
 dataset:
   # dataset-wide
   name:
-  raw_data_csv: C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\RawData\Class1RawData.csv
-  raw_data_dir: C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\RawData\Class1
+  raw_data_csv: /home/abfernan/CrossCanFloodMap/DatasetCNNFlood/RawData/Class1RawDataVelum.csv
+  raw_data_dir: /home/abfernan/CrossCanFloodMap/DatasetCNNFlood/RawData/Class1
   download_data: False
 
   # imagery

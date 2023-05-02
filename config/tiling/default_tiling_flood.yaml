@@ -1,6 +1,6 @@
 # @package _global_
 tiling:
-  tiling_data_dir: C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\C1Dataset
+  tiling_data_dir: 
   train_val_percent: {'trn':1., 'val':0.}
   patch_size: 384
   min_annot_perc: 10
