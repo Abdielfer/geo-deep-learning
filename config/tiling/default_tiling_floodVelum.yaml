@@ -1,0 +1,13 @@
+# @package _global_
+tiling:
+  tiling_data_dir: Home/abfernan/CrossCanFloodMapping/DatasetCNNFlood/C1Dataset
+  train_val_percent: {'trn':1., 'val':0.}
+  patch_size: 384
+  min_annot_perc: 10
+  patch_stride: 82  # Pixels number type=int
+  continuous_values: True
+  save_preview_labels: True
+  multiprocessing: False
+  clahe_clip_limit: 0
+  write_dest_raster: False
+  write_mode: "raise_exists"
