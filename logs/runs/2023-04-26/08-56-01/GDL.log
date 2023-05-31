@@ -1,0 +1,46 @@
+[2023-04-26 08:56:01,734][root][INFO] - 
+Overwritten parameters in the config: 
+mode=tiling
+[2023-04-26 08:56:01,735][root][INFO] - 
+---------------------------------------
+Let's start tiling for segmentation !!!
+---------------------------------------
+[2023-04-26 08:56:08,184][root][ERROR] - The key download_data as a None value.
+[2023-04-26 08:56:08,185][root][ERROR] - The key multiprocessing as a None value.
+[2023-04-26 08:56:08,186][root][ERROR] - The key write_dest_raster as a None value.
+[2023-04-26 08:56:08,187][root][ERROR] - The key clahe_clip_limit as a None value.
+[2023-04-26 08:56:09,202][dataset.aoi][INFO] - 
+	Successfully read csv file: Class1RawData.csv
+	Number of rows: 1
+	Copying first row:
+{'tif': 'C:\\Users\\abfernan\\CrossCanFloodMapping\\DatasetCNNFlood\\RawData\\Class1\\QC_Quebec.tif', 'gpkg': 'C:\\Users\\abfernan\\CrossCanFloodMapping\\DatasetCNNFlood\\RawData\\Class1\\QC_Quebec_C1.gpkg', 'split': 'trn'}
+
+[2023-04-26 08:56:09,681][tiling_segmentation][INFO] - Patches will be written to C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\C1Dataset\Percentage_1
+
+
+[2023-04-26 08:56:09,682][tiling_segmentation][INFO] - Preparing patches 
+	Samples_size: 384 
+[2023-04-26 08:56:45,095][tiling_segmentation][INFO] - Cropping raster patches...
+[2023-04-26 08:56:46,091][tiling_segmentation][INFO] - Tiling done. Creating pixel masks from clipped geojsons...
+[2023-04-26 08:58:00,459][tiling_segmentation][INFO] - 
+Expected val ratio: 0 %
+Actual val ratio: 0.00 %
+[2023-04-26 08:58:00,460][tiling_segmentation][INFO] - 
+Dataset: trn
+	Filters:
+	 - Minimumum non-zero values (aka minimum annotated percentage): 10%
+	Kept: 84
+	Discarded: 1339
+[2023-04-26 08:58:00,461][tiling_segmentation][INFO] - 
+Dataset: val
+	Total patches: 0
+[2023-04-26 08:58:00,462][tiling_segmentation][INFO] - 
+End of process. See tiled dataset lists:
+[2023-04-26 08:58:00,462][tiling_segmentation][INFO] - trn: C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\C1Dataset\Percentage_1\Percentage_1_feat1_min-annot10_trn.csv
+[2023-04-26 08:58:00,463][tiling_segmentation][INFO] - val: C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\C1Dataset\Percentage_1\Percentage_1_feat1_min-annot10_val.csv
+[2023-04-26 08:58:02,788][root][INFO] - 
+-----------------
+End of tiling !!!
+Elapsed time: 121.05s
+-----------------
+

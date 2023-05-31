@@ -1,0 +1,51 @@
+[2023-05-06 09:07:00,566][root][INFO] - 
+Overwritten parameters in the config: 
+mode=tiling
+[2023-05-06 09:07:00,567][root][INFO] - 
+---------------------------------------
+Let's start tiling for segmentation !!!
+---------------------------------------
+[2023-05-06 09:07:07,938][root][ERROR] - The key download_data as a None value.
+[2023-05-06 09:07:07,939][root][ERROR] - The key multiprocessing as a None value.
+[2023-05-06 09:07:07,940][root][ERROR] - The key write_dest_raster as a None value.
+[2023-05-06 09:07:07,940][root][ERROR] - The key clahe_clip_limit as a None value.
+[2023-05-06 09:07:08,267][dataset.aoi][INFO] - 
+	Successfully read csv file: Class1TestSet.csv
+	Number of rows: 6
+	Copying first row:
+{'tif': 'C:\\Users\\abfernan\\CrossCanFloodMapping\\DatasetCNNFlood\\RawData\\Class1\\NF_Shearstown.tif', 'gpkg': 'C:\\Users\\abfernan\\CrossCanFloodMapping\\DatasetCNNFlood\\RawData\\Class1\\NF_Shearstown_C1.gpkg', 'split': 'trn'}
+
+[2023-05-06 09:07:10,136][tiling_segmentation][INFO] - Patches will be written to C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\C1Dataset\Percentage_1_testSet
+
+
+[2023-05-06 09:07:10,136][tiling_segmentation][INFO] - Preparing patches 
+	Samples_size: 384 
+[2023-05-06 09:07:11,021][tiling_segmentation][INFO] - Cropping raster patches...
+[2023-05-06 09:07:11,818][tiling_segmentation][INFO] - Cropping raster patches...
+[2023-05-06 09:07:12,463][tiling_segmentation][INFO] - Cropping raster patches...
+[2023-05-06 09:07:13,210][tiling_segmentation][INFO] - Cropping raster patches...
+[2023-05-06 09:07:13,706][tiling_segmentation][INFO] - Cropping raster patches...
+[2023-05-06 09:07:25,994][tiling_segmentation][INFO] - Cropping raster patches...
+[2023-05-06 09:07:26,347][tiling_segmentation][INFO] - Tiling done. Creating pixel masks from clipped geojsons...
+[2023-05-06 09:07:52,943][tiling_segmentation][INFO] - 
+Expected val ratio: 0 %
+Actual val ratio: 0.00 %
+[2023-05-06 09:07:52,944][tiling_segmentation][INFO] - 
+Dataset: trn
+	Filters:
+	 - Minimumum non-zero values (aka minimum annotated percentage): 1%
+	Kept: 93
+	Discarded: 51
+[2023-05-06 09:07:52,945][tiling_segmentation][INFO] - 
+Dataset: val
+	Total patches: 0
+[2023-05-06 09:07:52,946][tiling_segmentation][INFO] - 
+End of process. See tiled dataset lists:
+[2023-05-06 09:07:52,946][tiling_segmentation][INFO] - trn: C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\C1Dataset\Percentage_1_testSet\Percentage_1_testSet_feat1_min-annot1_trn.csv
+[2023-05-06 09:07:52,947][tiling_segmentation][INFO] - val: C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\C1Dataset\Percentage_1_testSet\Percentage_1_testSet_feat1_min-annot1_val.csv
+[2023-05-06 09:07:53,479][root][INFO] - 
+-----------------
+End of tiling !!!
+Elapsed time: 52.91s
+-----------------
+

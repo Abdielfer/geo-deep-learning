@@ -1,0 +1,22 @@
+[2023-04-26 09:13:14,343][root][INFO] - 
+Overwritten parameters in the config: 
+mode=tiling
+[2023-04-26 09:13:14,344][root][INFO] - 
+---------------------------------------
+Let's start tiling for segmentation !!!
+---------------------------------------
+[2023-04-26 09:13:18,339][root][ERROR] - The key download_data as a None value.
+[2023-04-26 09:13:18,340][root][ERROR] - The key multiprocessing as a None value.
+[2023-04-26 09:13:18,341][root][ERROR] - The key write_dest_raster as a None value.
+[2023-04-26 09:13:18,342][root][ERROR] - The key clahe_clip_limit as a None value.
+[2023-04-26 09:13:18,806][dataset.aoi][INFO] - 
+	Successfully read csv file: Class1RawData.csv
+	Number of rows: 1
+	Copying first row:
+{'tif': 'C:\\Users\\abfernan\\CrossCanFloodMapping\\DatasetCNNFlood\\RawData\\Class1\\SK_Watson.tif', 'gpkg': 'C:\\Users\\abfernan\\CrossCanFloodMapping\\DatasetCNNFlood\\RawData\\Class1\\SK_Watson_C1.gpkg', 'split': 'trn'}
+
+[2023-04-26 09:13:19,019][tiling_segmentation][INFO] - Patches will be written to C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\C1Dataset\Percentage_1
+
+
+[2023-04-26 09:13:19,019][tiling_segmentation][INFO] - Preparing patches 
+	Samples_size: 384 

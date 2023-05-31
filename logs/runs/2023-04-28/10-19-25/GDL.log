@@ -1,0 +1,18 @@
+[2023-04-28 10:19:25,511][root][INFO] - 
+Overwritten parameters in the config: 
+mode=tiling
+[2023-04-28 10:19:25,512][root][INFO] - 
+---------------------------------------
+Let's start tiling for segmentation !!!
+---------------------------------------
+[2023-04-28 10:19:27,679][root][ERROR] - The key download_data as a None value.
+[2023-04-28 10:19:27,680][root][ERROR] - The key multiprocessing as a None value.
+[2023-04-28 10:19:27,681][root][ERROR] - The key write_dest_raster as a None value.
+[2023-04-28 10:19:27,682][root][ERROR] - The key clahe_clip_limit as a None value.
+[2023-04-28 10:19:27,860][tiling_segmentation][WARNING] - Data path exists: C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\C1Dataset\Percentage_1. Make sure patches belong to the same experiment.
+[2023-04-28 10:19:27,871][dataset.aoi][INFO] - 
+	Successfully read csv file: Class1RawData.csv
+	Number of rows: 1
+	Copying first row:
+{'tif': 'C:\\Users\\abfernan\\CrossCanFloodMapping\\DatasetCNNFlood\\RawData\\Class1\\SK_Yorkton.tif', 'gpkg': 'C:\\Users\\abfernan\\CrossCanFloodMapping\\DatasetCNNFlood\\RawData\\Class1\\SK_Yorkton_C1.gpkg', 'split': 'trn'}
+

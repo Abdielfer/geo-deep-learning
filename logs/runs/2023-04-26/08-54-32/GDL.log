@@ -1,0 +1,11 @@
+[2023-04-26 08:54:32,509][root][INFO] - 
+Overwritten parameters in the config: 
+mode=tiling
+[2023-04-26 08:54:32,509][root][INFO] - 
+---------------------------------------
+Let's start tiling for segmentation !!!
+---------------------------------------
+[2023-04-26 08:54:40,008][root][ERROR] - The key download_data as a None value.
+[2023-04-26 08:54:40,008][root][ERROR] - The key multiprocessing as a None value.
+[2023-04-26 08:54:40,013][root][ERROR] - The key write_dest_raster as a None value.
+[2023-04-26 08:54:40,013][root][ERROR] - The key clahe_clip_limit as a None value.
