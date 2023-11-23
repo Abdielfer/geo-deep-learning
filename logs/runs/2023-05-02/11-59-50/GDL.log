@@ -1,0 +1,9 @@
+[2023-05-02 11:59:51,023][root][INFO] - 
+Overwritten parameters in the config: 
+mode=tiling
+[2023-05-02 11:59:51,024][root][INFO] - 
+---------------------------------------
+Let's start tiling for segmentation !!!
+---------------------------------------
+[2023-05-02 11:59:51,977][root][CRITICAL] - Couldn't locate path: /home/abfernan/CrossCanFloodMap/geo-deep-learning/C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\RawData\Class1.
+Provided key: raw_data_dir
