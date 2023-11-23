@@ -1,0 +1,10 @@
+[2023-06-02 11:14:01,278][root][INFO] - 
+Overwritten parameters in the config: 
+mode=tiling
+[2023-06-02 11:14:01,279][root][INFO] - 
+---------------------------------------
+Let's start tiling for segmentation !!!
+---------------------------------------
+[2023-06-02 11:14:02,246][hydra.utils][ERROR] - Error getting callable at tiling_segmentation.main : Error loading 'tiling_segmentation.main':
+ModuleNotFoundError("No module named 'solaris'")
+Are you sure that module 'tiling_segmentation' is installed?

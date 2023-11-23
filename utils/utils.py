@@ -2,6 +2,7 @@ import os
 import csv
 import logging
 import numbers
+import math
 import subprocess
 from functools import reduce
 from pathlib import Path
@@ -17,6 +18,7 @@ from omegaconf import DictConfig, OmegaConf, ListConfig
 import torch
 from torchvision import models
 import numpy as np
+import pandas as pd
 import scipy.signal
 import requests
 from urllib.parse import urlparse
@@ -24,12 +26,12 @@ from urllib.parse import urlparse
 # These two import statements prevent exception when using eval(metadata) in SegmentationDataset()'s __init__()
 from rasterio.crs import CRS
 from affine import Affine
+import rasterio as rio
 
 from utils.logger import get_logger
 
 # Set the logging file
 log = get_logger(__name__)  # need to be different from logging in this case
-
 
 class Interpolate(torch.nn.Module):
     def __init__(self, mode, scale_factor):
@@ -196,6 +198,135 @@ def get_key_def(key, config, default=None, expected_type=None, to_path: bool = F
 
     return val
 
+#### Compute globals Mean and STD from a set of raster images###
+class standardizer():
+    def __init__(self) -> None:
+        '''
+        Class to manage the standardization of a set of rasters. 
+         - Compute the global values of min, max, mean and STD for a set of raster.
+         - Save the global values as *csv file.
+         - Standardize a raster set or a single raster, using the globals min, max, mean and std
+        '''
+        self.globMin = np.inf
+        self.globMax = -np.inf
+        self.globMean = 0
+        self.globSTD = 0
+       
+    def computeGlobalValues(self, rasterListPath, extraNoData = None):
+        '''
+        Compute the global Standard Deviation from a list of raters.
+        @rasterList: a list of raster path.
+        '''
+        rasterList = createListFromCSVColumn(rasterListPath,0,';')
+        globalCont = 0  # The total number of pixels in <rasterList>, different from NoData value.
+        cummulativeMean = 0
+        # Compute globalMin, globalMax, globalMean
+        for ras in rasterList:
+            localMin, localMax,rasMean,rasCont = computeRaterStats(ras) #rasMin, rasMax, rasMean, rasNoNaNCont
+            self.updateGlobalMinMax(localMin, localMax)
+            globalCont += rasCont
+            cummulativeMean += rasMean
+        self.globMean = cummulativeMean/len(rasterList)  # From the math principle: the mean of subsets means is also the global mean. 
+        print(f"Globals : min:{self.globMin}>> max:{self.globMax} >> MEan : {self.globMean} >> globalCount {globalCont}" )
+        #Compute globa quadratic error
+        globSumQuadraticError = 0 
+        for raster in rasterList:
+            rasData = replaceRastNoDataWithNan(raster,extraNoDataVal= extraNoData)
+            globSumQuadraticError += computeSumQuadraticError(rasData,self.globMean)
+        
+        self.globSTD = math.sqrt(globSumQuadraticError/globalCont )
+        print(f"Final values: GlobSumSQError {globSumQuadraticError}, GlobSTD : {self.globSTD}")
+
+    def updateGlobalMinMax(self, localMin,localMax):
+        if localMin < self.globMin: self.globMin = localMin
+        if localMax > self.globMax: self.globMax = localMax
+
+    def setGlobals(self,min = None, max = None, mean = None, std = None):
+        if min is not None: self.globMin = min
+        if max is not None: self.globMax = max
+        if mean is not None: self.globMean = mean
+        if std is not None: self.globSTD = std
+
+    def setExtraNoData(self, value):
+        self.extraNoData = value
+
+    def getGlobals(self):
+        return self.globMin, self.globMax, self.globMean, self.globSTD   
+
+    def saveGlobals(self, pathToSaveCSV: os.path):
+        '''
+        Write the global min, max, mean and STD to a csv file. 
+        '''
+        globals = {'globalMin': self.globMin, 'globalMax': self.globMax, 'globalMean': self.globMean, 'globalSTD': self.globSTD}
+        with open(pathToSaveCSV, 'w') as f:
+            for key in globals.keys():
+                f.write("%s,%s\n"%(key,globals[key]))
+
+    def standardizeRasterData(self, rasterData:np.array )->np.array:
+        output = (rasterData - self.globMean)/self.globSTD 
+        return  output
+
+### Standardizer Helpers 
+def createListFromCSVColumn(csv_file_location, col_idx:int, delim:str =','):  
+    '''
+    @return: list from <col_id> in <csv_file_location>.
+    Argument:
+    @col_index: 
+    @csv_file_location: full path file location and name.
+    @col_idx : number of the desired collumn to extrac info from (Consider index 0 for the first column)
+    '''       
+    x=[]
+    df = pd.read_csv(csv_file_location, index_col= None, delimiter = delim)
+    fin = df.shape[0]
+    for i in range(0,fin):
+        x.append(df.iloc[i,col_idx])
+    return x
+
+def readRaster(rasterPath:os.path):
+    '''
+    Read a raster qith Rasterio.
+    return:
+     Raster data as np.array
+     Raster Profile. 
+    '''
+    inRaster = rio.open(rasterPath, mode="r")
+    profile = inRaster.profile
+    rasterData = inRaster.read()
+    # print(f"raster data shape in ReadRaster : {rasterData.shape}")
+    return rasterData, profile
+
+def replaceRastNoDataWithNan(rasterPath:os.path,extraNoDataVal: float = None)-> np.array:
+    rasterData,profil = readRaster(rasterPath)
+    NOData = profil['nodata']
+    rasterDataNan = np.where(((rasterData == NOData)|(rasterData == extraNoDataVal)), np.nan, rasterData) 
+    return rasterDataNan
+
+def computeSumQuadraticError(arr:np.array, mean):
+    '''
+    Compute elementwise quadratic errors of a np.array, and its sum excluding np.nan values
+    @mean: This mean could be the mean of <<arr>> or an external mean. 
+    '''
+    quadError = (arr - mean)**2
+    return np.nansum(quadError)
+
+def computeRaterStats(rasterPath:os.path):
+    '''
+    Read a reaste and return: 
+    @Return
+    @rasMin: Raster min.
+    @rasMax: Raster max.
+    @rasMean: Rater mean.
+    @rasNoNaNSum: Raster sum of NOT NoData pixels
+    @rasNoNaNCont: Raster count of all NOT NoData pixels
+    '''
+    rasDataNan = replaceRastNoDataWithNan(rasterPath)
+    rasMin = np.min(rasDataNan)
+    rasMax = np.max(rasDataNan)
+    rasMean = np.mean(rasDataNan)
+    rasNoNaNCont = np.count_nonzero(rasDataNan != np.nan)
+    return rasMin, rasMax, rasMean, rasNoNaNCont
+
+## End Helpers
 
 def minmax_scale(img, scale_range=(0, 1), orig_range=(0, 255)):
     """

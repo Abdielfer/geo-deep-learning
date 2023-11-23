@@ -25,6 +25,10 @@ from utils.loss import verify_weights, define_loss
 from utils.metrics import create_metrics_dict, calculate_batch_metrics
 from utils.utils import gpu_stats, get_key_def, get_device_ids, set_device
 from utils.visualization import vis_from_batch
+
+from utils.utils import standardizer
+
+
 # Set the logging file
 logging = get_logger(__name__)  # import logging
 
@@ -41,6 +45,24 @@ def flatten_outputs(predictions, number_of_classes):
     logits_permuted_cont = logits_permuted.contiguous()
     outputs_flatten = logits_permuted_cont.view(-1, number_of_classes)
     return outputs_flatten
+
+
+class computeStandardizers():
+    def __init__(self, cfg:DictConfig) -> None:
+        '''
+        @filelist: os.path containing the list of rater 
+        '''
+        self.list = cfg['trainingDataList']
+        self.savePath = cfg['standardizerSavePath']
+        self.stardardizers = {}
+        self.stardardizers = self.compute()
+        pass
+    
+    def compute(self)-> dict:
+        stand = standardizer()
+        stand.computeGlobalValues(self.list)
+        stand.saveGlobals(self.savePath)
+        return standardizer.getGlobals()
 
 
 def create_dataloader(patches_folder: Path,
@@ -822,3 +844,5 @@ def main(cfg: DictConfig) -> None:
 
     # execute the name mode (need to be in this file for now)
     train(cfg)
+
+

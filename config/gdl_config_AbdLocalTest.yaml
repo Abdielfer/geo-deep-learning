@@ -13,8 +13,6 @@ defaults:
   - visualization: default_visualization
   - inference: default_binary
   - hydra: default
-  - override hydra/hydra_logging: colorlog # enable color logging to make it pretty
-  - override hydra/job_logging: colorlog # enable color logging to make it pretty
   - _self_
 
 general:
@@ -27,12 +25,12 @@ general:
   config_name: ${hydra:job.config_name}
   config_override_dirname: ${hydra:job.override_dirname}
   config_path: ${hydra:runtime.config_sources}
-  project_name: Percentage_1
-  workspace: AbdielLocaTest
+  project_name: Percentage_1_intensSampl_tst
+  workspace: C1_Test
   max_epochs: 20 # for train only
   min_epochs: 1 # for train only
   raw_data_dir: C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\RawData\Class1
-  raw_data_csv: C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\RawData\Class1RawData.csv
+  raw_data_csv: C:\Users\abfernan\CrossCanFloodMapping\DatasetCNNFlood\RawData\Class1TestSet.csv
   tiling_data_dir: ${general.raw_data_dir} # where the patches will be saved
   save_weights_dir: saved_model/${general.project_name}
 
